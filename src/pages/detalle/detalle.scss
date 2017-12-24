@@ -1,0 +1,97 @@
+page-detalle {
+
+}
+
+ion-footer{
+	text-align: center;
+}
+
+div#llamar{
+	margin-top: 5px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 6vw;
+}
+
+div#icono{
+	font-size: 8vw;
+}
+
+div#info{
+	text-align: center;
+}
+
+div#info.nombre{
+	font-weight: bold;
+	font-size: 6.5vw;
+}
+
+div#info.servicio{
+	position: absolute;
+	font-size: 0.5vw;
+}
+
+div#numeros{
+	margin-top: -15px;
+	font-size: 3vw;
+	button{
+		width: 100%;
+	}	
+}
+
+ion-row#telefono{
+	margin-left: -20px;
+	margin-right: -20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-top: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: white;
+}
+
+ion-icon#icono{
+	margin-left: -10px;
+	margin-top: 3px;
+}
+ 
+ion-icon#botonfb{
+	text-align: center;
+	font-size: 10vw;
+	margin-top: 0px;
+	margin-left: -10px;
+}
+
+ion-row#rowbotones{
+	margin-left: 1px;
+	text-align: center;
+	margin-top: 5px;
+}
+
+div#divbotones{
+	justify-content: center;
+}
+
+ion-slide{
+	
+}
+
+ion-content#listaprecio{
+	height: 180px;
+	width: 100%;
+
+}
+
+ion-list#vamos{
+	margin-left: -20px;
+	margin-right: -20px;
+}
+
+ion-note#precio{
+	color: #000000;
+
+}
+
+div#segment{
+	
+}

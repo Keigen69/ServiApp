@@ -1,0 +1,49 @@
+<!--
+  Generated template for the ListaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="verdeapp">
+    <ion-title>Servicios</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-list>
+	<div id="destacado">
+		<ion-item-divider>DESTACADOS</ion-item-divider>
+	</div>
+	
+	<div *ngFor="let item of comida">
+		<ion-item  *ngIf="item.destacado" (click)="goToDetalle(item)"   >
+	      <ion-thumbnail item-start >
+	        <img src="images/{{item.nombre}}.png"  >
+	      </ion-thumbnail>
+	      <h2>{{ item.nombre }}</h2 >
+	      <h3>{{ item.servicio }}</h3 >
+	      <h2>{{ item.whatsapp }}</h2 >
+	      <p>{{ item.direccion }}</p >
+	      <ion-icon name="ios-call" color="verde" item-end></ion-icon>
+	    </ion-item>
+	    </div>
+	    </ion-list>
+
+	<ion-list>
+	    <ion-item   *ngFor="let item of comida" (click)="goToDetalle(item)" >
+	      <ion-thumbnail item-start >
+	        <img src="images/{{item.nombre}}.png">
+	      </ion-thumbnail>
+	      <h2>{{ item.nombre }}</h2>
+	      <h3>{{ item.servicio }}</h3>
+	      <h2>{{ item.whatsapp }}</h2>
+	      <p>{{ item.direccion }}</p>
+	    </ion-item>
+	  </ion-list>
+
+</ion-content>

@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-navbar color="verdeapp">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Categorías</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="card-background-page">
+
+  <ion-row id="cate">
+
+    <div col-6>
+      <ion-card (click)="goToLista()">
+        <img src="images/fondos/comida.jpg"/>
+        <div class="card-title">COMIDA</div>
+        <div class="card-subtitle">Sushi - Pizeria - Delivery</div>
+      </ion-card>
+    </div>
+
+    <div col-6>
+      <ion-card (click)="goToLista()">
+        <img src="images/fondos/serviciotecnico.jpg"/>
+        <div class="card-title">TÉCNICO</div>
+        <div class="card-subtitle">Gásfiter - Eléctrico - Computación</div>
+      </ion-card>
+    </div>
+   
+  </ion-row>
+
+  <ion-row id="cate">
+    <div col-6>
+      <ion-card (click)="goToLista()">
+        <img src="images/fondos/transporte.jpg"/>
+        <div class="card-title">TRANSPORTE</div>
+        <div class="card-subtitle">Radio Taxi - Fletes - Mudanzas</div>
+      </ion-card>
+    </div>
+    <div col-6>
+      <ion-card (click)="goToLista()">
+        <img src="images/fondos/belleza.jpg"/>
+        <div class="card-title">BELLEZA</div>
+        <div class="card-subtitle">Peluquería - Podología - Masajes</div>
+      </ion-card>
+    </div>
+  </ion-row>
+
+  <ion-row id="cate">
+    <div col-6>
+      <ion-card (click)="goToLista()">
+        <img src="images/fondos/mascotas.jpg"/>
+        <div class="card-title">MASCOTAS</div>
+        <div class="card-subtitle">Veterinaria - Peluquería - Alimentos</div>
+      </ion-card>
+    </div>
+    <div col-6> 
+      <ion-card (click)="goToLista()">
+        <img src="images/fondos/negocios.jpg"/>
+        <div class="card-title">NEGOCIOS</div>
+        <div class="card-subtitle">Almacén - Ferretería - Aseo</div>
+      </ion-card>
+    </div>
+  </ion-row>
+
+  <ion-row id="cate">
+    <div col-6>
+      <ion-card (click)="goToLista()">
+        <img src="images/fondos/salud.jpg"/>
+        <div class="card-title">SALUD</div>
+        <div class="card-subtitle">Gimnasio - Farmacia - Médico</div>
+      </ion-card>
+    </div>
+    <div col-6>
+      <ion-card (click)="goToLista()">
+        <img src="images/fondos/otros.jpg"/>
+        <div class="card-title">OTROS</div>
+        <div class="card-subtitle"></div>
+      </ion-card>
+    </div>
+  </ion-row>
+
+</ion-content>
+

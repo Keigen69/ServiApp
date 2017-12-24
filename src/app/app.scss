@@ -1,0 +1,74 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+ion-content {
+    background-image: url(../../www/images/fondo.jpg);
+    background-size: 100% 100%;
+}
+
+ion-content#listaprecio{
+    background-image: url(none);
+}
+
+
+
+ion-content.card-background-page{
+    ion-row{
+        div.comida{
+            
+            background-image: url(https://i62.servimg.com/u/f62/12/00/31/40/fondo_12.jpg);
+            background-size: 100% 100%;
+            
+        } 
+    }
+}
+
+ion-col.serviciotecnico{
+    background-image: url(/images/fondos/Serviciotecnico.png);
+    background-size: 100% 100%;
+}
+
+ion-col.belleza{
+    background-image: url(/images/fondos/Belleza.png);
+    background-size: 100% 100%;
+}
+
+ion-col.transporte{
+    background-image: url(/images/fondos/Transporte.png);
+    background-size: 100% 100%;
+}
+
+ion-col.mascotas{
+    background-image: url(/images/fondos/Mascotas.png);
+    background-size: 100% 100%;
+}
+
+ion-col.otros{
+    background-image: url(/images/fondos/Otros.png);
+    background-size: 100% 100%;
+}
+
+ion-col.negocios{
+    background-image: url(/images/fondos/Negocios.png);
+    background-size: 100% 100%;
+}
+
+ion-col.salud{
+    background-image: url(/images/fondos/Salud.png);
+    background-size: 100% 100%;
+}
+

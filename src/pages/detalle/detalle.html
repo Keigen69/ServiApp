@@ -1,0 +1,254 @@
+<!--
+  Generated template for the DetallePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+
+
+  <ion-navbar color="verdeapp" >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{item.nombre}}</ion-title> 
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="md-add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+    <ion-fab right top>
+    <button ion-fab color="light"><ion-icon name="md-arrow-dropleft"></ion-icon></button>
+    <ion-fab-list side="left">
+      <ion-card>
+        <ion-card-header>
+         Medios de pago
+        </ion-card-header>
+        <ion-card-content>
+        Efectivo
+        </ion-card-content>
+        <ion-card-content>
+        Cheque
+        </ion-card-content>
+        <ion-card-content>
+        Débito
+        </ion-card-content>
+        <ion-card-content>
+        Crédito
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+         Otros
+        </ion-card-header>
+        <ion-card-content>
+        Carga bip!
+        </ion-card-content>
+        <ion-card-content>
+        Caja Vecina
+        </ion-card-content>
+      </ion-card>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+  </ion-content>
+
+<ion-content padding>
+  <ion-row>
+    <div col-5>
+        <img src="images/{{item.nombre}}.png">      
+    </div>
+    <div col-7>
+        <div col-12 id="info" class="nombre">
+          {{item.nombre}}
+        </div>
+        <div col-12 id="info">
+          {{item.servicio}}
+        </div>
+        <div col-12 id="info">
+          <ion-icon name="md-pin" color="rojo"></ion-icon> {{item.direccion}}
+        </div>
+    </div>
+  </ion-row>
+
+  <ion-row id="telefono">
+
+    <div col-6 id="numeros" *ngIf="item.telfijo1">
+      <button ion-button icon-left outline color="rojo"  (click)="llamar(item.telfijo1)">
+        <div col-1>
+          <ion-icon name="md-home" color="rojo" id="icono"></ion-icon>
+        </div>
+        <div col-11>
+          {{item.telfijo1}}
+        </div>
+        
+        
+      </button>        
+    </div>
+
+    <div col-6 id="numeros" *ngIf="item.telfijo2">
+      <button ion-button icon-left outline color="rojo"  (click)="llamar(item.telfijo2)">
+        <div col-1>
+          <ion-icon name="md-home" color="rojo" id="icono"></ion-icon>
+        </div>
+         <div col-11>
+          {{item.telfijo2}}
+        </div>
+      </button>       
+    </div>
+
+    <div col-6 id="numeros" *ngIf="item.telfijo3">
+      <button ion-button icon-left outline color="rojo"  (click)="llamar(item.telfijo3)">
+        <div col-1>
+        <ion-icon name="md-home" color="rojo" id="icono"></ion-icon>
+        </div>
+         <div col-11>
+        {{item.telfijo3}}
+        </div>
+      </button>       
+    </div>
+
+    <div col-6 id="numeros" *ngIf="item.celular1">
+      <button ion-button icon-left outline color="naranjo"  (click)="llamar(item.celular1)">
+        <div col-1>
+        <ion-icon name="md-phone-portrait" color="naranjo" id="icono"></ion-icon>
+        </div>
+         <div col-11>
+        {{item.celular1}}
+        </div>
+      </button>        
+    </div>
+
+    <div col-6 id="numeros" *ngIf="item.celular2">
+      <button ion-button icon-left outline color="naranjo"  (click)="llamar(item.celular2)">
+        <div col-1>
+        <ion-icon name="md-phone-portrait" color="naranjo" id="icono"></ion-icon>
+        </div>
+         <div col-11>
+        {{item.celular2}}
+        </div>
+      </button>        
+    </div>
+
+    <div col-6 id="numeros" *ngIf="item.celular3">
+      <button ion-button icon-left outline color="naranjo"  (click)="llamar(item.celular3)">
+        <div col-1>
+        <ion-icon name="md-phone-portrait" color="naranjo" id="icono"></ion-icon>
+        </div>
+         <div col-11>
+        {{item.celular3}}
+        </div>
+      </button>        
+    </div>
+
+    <div col-6 id="numeros" *ngIf="item.whatsapp">
+      <button ion-button icon-left outline color="verde"  (click)="llamar(item.whatsapp)">
+        <div col-1>
+        <ion-icon name="logo-whatsapp" color="verde" id="icono"></ion-icon>
+        </div>
+         <div col-11>
+        {{item.whatsapp}}
+        </div>
+      </button>        
+    </div>
+
+    <div col-6 id="numeros" *ngIf="item.whatsapp">
+      <button ion-button icon-left outline color="verde"  (click)="llamar(item.whatsapp)">
+        <div col-1>
+        <ion-icon name="logo-whatsapp" color="verde" id="icono"></ion-icon>
+        </div>
+         <div col-11>
+        {{item.whatsapp}}
+        </div>
+      </button>        
+    </div>
+    
+  </ion-row>
+
+
+  <div id="divbotones">
+  <ion-row id="rowbotones">
+  <div col-2 *ngIf="item.facebook" (click)="abrirWeb(item.facelink)"><img src="https://i62.servimg.com/u/f62/12/00/31/40/facebo10.png"></div>
+  <div col-2 *ngIf="item.instagram" (click)="abrirWeb(item.instalink)"><img src="https://i62.servimg.com/u/f62/12/00/31/40/instag10.png"></div>
+  <div col-2 *ngIf="item.pagweb" (click)="abrirWeb(item.pagweb)"><img src="https://i62.servimg.com/u/f62/12/00/31/40/web10.png"></div>
+  <div col-2 *ngIf="item.correo" (click)="abrirWeb(item.pagweb)"><img src="https://i62.servimg.com/u/f62/12/00/31/40/email10.png"></div>
+  <div col-2 *ngIf="item.direccion" (click)="abrirWeb(item.direlink)"><img src="https://i62.servimg.com/u/f62/12/00/31/40/direcc10.png"></div>
+  </ion-row>
+  </div>
+
+<div id="segment">
+  <ion-segment color="dark" [(ngModel)]="pet">
+    <ion-segment-button value="promocion">
+      Promoción
+    </ion-segment-button>
+    <ion-segment-button value="catalogo">
+      Catálogo
+    </ion-segment-button>
+  </ion-segment>
+
+</div>
+
+  <div [ngSwitch]="pet">
+  <ion-list *ngSwitchCase="'promocion'">
+  
+    <ion-slides pager>
+
+  <ion-slide>
+    <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
+  </ion-slide>
+
+  <ion-slide>
+    <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
+  </ion-slide>
+
+  <ion-slide>
+    <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
+  </ion-slide>
+
+</ion-slides>
+
+
+
+
+  </ion-list>
+ 
+  <ion-list *ngSwitchCase="'catalogo'" >
+    <ion-content id="listaprecio"> 
+    <ion-list id="vamos">
+      <ion-item>Yakizoba<ion-note item-end id="precio">
+      $25.360
+      </ion-note></ion-item>
+      <ion-item>Angola<ion-note item-end id="precio">
+      $25.360
+      </ion-note></ion-item>
+      <ion-item>Angola<ion-note item-end id="precio">
+      $25.360
+      </ion-note></ion-item>
+      <ion-item>Angola<ion-note item-end id="precio">
+      $25.360
+      </ion-note></ion-item>
+      <ion-item>Angola<ion-note item-end id="precio">
+      $25.360
+      </ion-note></ion-item>
+      <ion-item>Angola<ion-note item-end id="precio">
+      $25.360
+      </ion-note></ion-item>
+      <ion-item>Angola<ion-note item-end id="precio">
+      $25.360
+      </ion-note></ion-item>
+    </ion-list>
+    </ion-content>
+  </ion-list>
+
+</div>
+
+</ion-content>
+
+
+
