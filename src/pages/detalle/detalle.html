@@ -12,7 +12,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>{{item.nombre}}</ion-title> 
+    <ion-title>Servicio</ion-title> 
     <ion-buttons end>
       <button ion-button icon-only color="royal">
         <ion-icon name="md-add-circle"></ion-icon>
@@ -22,47 +22,11 @@
 
 </ion-header>
 
-<ion-content>
-    <ion-fab right top>
-    <button ion-fab color="light"><ion-icon name="md-arrow-dropleft"></ion-icon></button>
-    <ion-fab-list side="left">
-      <ion-card>
-        <ion-card-header>
-         Medios de pago
-        </ion-card-header>
-        <ion-card-content>
-        Efectivo
-        </ion-card-content>
-        <ion-card-content>
-        Cheque
-        </ion-card-content>
-        <ion-card-content>
-        Débito
-        </ion-card-content>
-        <ion-card-content>
-        Crédito
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-header>
-         Otros
-        </ion-card-header>
-        <ion-card-content>
-        Carga bip!
-        </ion-card-content>
-        <ion-card-content>
-        Caja Vecina
-        </ion-card-content>
-      </ion-card>
-      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
-    </ion-fab-list>
-  </ion-fab>
-  </ion-content>
 
 <ion-content padding>
   <ion-row>
     <div col-5>
-        <img src="images/{{item.nombre}}.png">      
+        <img src="images/logos/{{item.nombre}}.png">      
     </div>
     <div col-7>
         <div col-12 id="info" class="nombre">
@@ -147,24 +111,24 @@
       </button>        
     </div>
 
-    <div col-6 id="numeros" *ngIf="item.whatsapp">
+    <div col-6 id="numeros" *ngIf="item.whatsapp1">
       <button ion-button icon-left outline color="verde"  (click)="llamar(item.whatsapp)">
         <div col-1>
         <ion-icon name="logo-whatsapp" color="verde" id="icono"></ion-icon>
         </div>
          <div col-11>
-        {{item.whatsapp}}
+        {{item.whatsapp1}}
         </div>
       </button>        
     </div>
 
-    <div col-6 id="numeros" *ngIf="item.whatsapp">
+    <div col-6 id="numeros" *ngIf="item.whatsapp2">
       <button ion-button icon-left outline color="verde"  (click)="llamar(item.whatsapp)">
         <div col-1>
         <ion-icon name="logo-whatsapp" color="verde" id="icono"></ion-icon>
         </div>
          <div col-11>
-        {{item.whatsapp}}
+        {{item.whatsapp2}}
         </div>
       </button>        
     </div>
@@ -194,29 +158,27 @@
 
 </div>
 
-  <div [ngSwitch]="pet">
+<div [ngSwitch]="pet" >
   <ion-list *ngSwitchCase="'promocion'">
   
     <ion-slides pager>
 
-  <ion-slide>
-    <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
-  </ion-slide>
+      <ion-slide>
+        <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
+      </ion-slide>
 
-  <ion-slide>
-    <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
-  </ion-slide>
+      <ion-slide>
+        <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
+      </ion-slide>
 
-  <ion-slide>
-    <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
-  </ion-slide>
+      <ion-slide>
+        <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
+      </ion-slide>
 
-</ion-slides>
-
-
-
+    </ion-slides>
 
   </ion-list>
+
  
   <ion-list *ngSwitchCase="'catalogo'" >
     <ion-content id="listaprecio"> 
