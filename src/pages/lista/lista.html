@@ -15,29 +15,30 @@
 
 <ion-content padding>
 
-	<ion-list>
-	<div id="destacado">
-		<ion-item-divider>DESTACADOS</ion-item-divider>
+	<div >
+	<ion-list id="destacado2">
+		<div id="destacado">
+			<ion-item-divider>DESTACADOS</ion-item-divider>
+		</div>
+			<div *ngFor="let item of comida">
+				<ion-item (click)="goToDetalle(item)" *ngIf="item.destacado">
+			      <ion-thumbnail item-start >
+			        <img src="images/logos/{{item.nombre}}.png">
+			      </ion-thumbnail>
+			      <h2>{{ item.nombre }}</h2 >
+			      <h3>{{ item.servicio }}</h3 >
+			      <p>{{ item.direccion }}</p >
+			      <ion-icon name="ios-call" color="verde" item-end></ion-icon>
+			    </ion-item>
+		    </div>
+	</ion-list>
 	</div>
-	
-	<div *ngFor="let item of comida">
-		<ion-item  *ngIf="item.destacado" (click)="goToDetalle(item)"   >
-	      <ion-thumbnail item-start >
-	        <img src="images/{{item.nombre}}.png"  >
-	      </ion-thumbnail>
-	      <h2>{{ item.nombre }}</h2 >
-	      <h3>{{ item.servicio }}</h3 >
-	      <h2>{{ item.whatsapp }}</h2 >
-	      <p>{{ item.direccion }}</p >
-	      <ion-icon name="ios-call" color="verde" item-end></ion-icon>
-	    </ion-item>
-	    </div>
-	    </ion-list>
+
 
 	<ion-list>
-	    <ion-item   *ngFor="let item of comida" (click)="goToDetalle(item)" >
+	    <ion-item *ngFor="let item of comida" (click)="goToDetalle(item)" >
 	      <ion-thumbnail item-start >
-	        <img src="images/{{item.nombre}}.png">
+	        <img src="images/logos/{{item.nombre}}.png">
 	      </ion-thumbnail>
 	      <h2>{{ item.nombre }}</h2>
 	      <h3>{{ item.servicio }}</h3>
