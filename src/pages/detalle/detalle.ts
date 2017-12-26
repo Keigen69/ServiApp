@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
+import { PopoverController } from 'ionic-angular';
+import { PopoverPage } from '../popover/popover';
 
 /**
  * Generated class for the DetallePage page.
@@ -20,11 +22,18 @@ export class DetallePage {
   phoneNumber: number;
   public pet;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private call: CallNumber) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private call: CallNumber, public popoverCtrl: PopoverController) {
 
-	this.item = navParams.get('item');
+  this.item = navParams.get('item');
   this.pet = "promocion";
 
+  }
+
+  presentPopover(myEvent) {
+    let popover = this.popoverCtrl.create(PopoverPage);
+    popover.present({
+      ev: myEvent
+    });
   }
 
   llamar(mobNumber:string)
