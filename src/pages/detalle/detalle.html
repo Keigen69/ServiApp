@@ -6,8 +6,6 @@
 -->
 <ion-header>
 
-
-
   <ion-navbar color="verdeapp" >
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -15,12 +13,14 @@
     <ion-title>{{item.nombre}}</ion-title> 
     <ion-buttons end>
       <button ion-button icon-only color="royal" (click)="presentPopover($event)">
-        <ion-icon name="md-add-circle"></ion-icon>
+        <ion-icon name="md-help"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
 
 </ion-header>
+
+
 
 <ion-content padding>
   <ion-row>
@@ -137,7 +137,7 @@
 
   <div id="divbotones">
   <ion-row id="rowbotones">
-  <div col-2 *ngIf="item.facebook" (click)="abrirWeb(item.facelink)"><img src="https://i62.servimg.com/u/f62/12/00/31/40/facebo10.png"></div>
+  <div col-2 *ngIf="item.facebook" (click)="abrirWeb(item.facelink)"><img src="/images/iconos/facebook.png"></div>
   <div col-2 *ngIf="item.instagram" (click)="abrirWeb(item.instalink)"><img src="https://i62.servimg.com/u/f62/12/00/31/40/instag10.png"></div>
   <div col-2 *ngIf="item.pagweb" (click)="abrirWeb(item.pagweb)"><img src="https://i62.servimg.com/u/f62/12/00/31/40/web10.png"></div>
   <div col-2 *ngIf="item.correo" (click)="abrirWeb(item.pagweb)"><img src="https://i62.servimg.com/u/f62/12/00/31/40/email10.png"></div>
@@ -146,11 +146,11 @@
   </div>
 
 <div id="segment">
-  <ion-segment color="dark" [(ngModel)]="pet">
-    <ion-segment-button value="promocion">
+  <ion-segment [(ngModel)]="pet" id="promo"  color="negro">
+    <ion-segment-button value="promocion" id=palabrapromo>
       Promoción
     </ion-segment-button>
-    <ion-segment-button value="catalogo">
+    <ion-segment-button value="catalogo" id=palabrapromo>
       Catálogo
     </ion-segment-button>
   </ion-segment>
@@ -159,29 +159,24 @@
 
   <div [ngSwitch]="pet">
   <ion-list *ngSwitchCase="'promocion'">
-  
-    <ion-slides pager>
+      <ion-slides pager>
 
-  <ion-slide>
-    <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
-  </ion-slide>
+        <ion-slide>
+          <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
+        </ion-slide>
 
-  <ion-slide>
-    <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
-  </ion-slide>
+        <ion-slide>
+          <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
+        </ion-slide>
 
-  <ion-slide>
-    <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
-  </ion-slide>
+        <ion-slide>
+          <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
+        </ion-slide>
 
-</ion-slides>
-
-
-
-
+      </ion-slides>
   </ion-list>
  
-  <ion-list *ngSwitchCase="'catalogo'" >
+  <ion-list *ngSwitchCase="'catalogo'">
     <ion-content id="listaprecio"> 
     <ion-list id="vamos">
       <ion-item>Yakizoba<ion-note item-end id="precio">

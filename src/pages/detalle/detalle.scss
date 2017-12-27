@@ -35,7 +35,7 @@ div#numeros{
 	margin-top: -15px;
 	font-size: 3vw;
 	button{
-		width: 100%;
+	width: 100%;
 	}	
 }
 
@@ -95,3 +95,17 @@ ion-note#precio{
 div#segment{
 	
 }
+
+ion-segment#promo{
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+
+}
+
+ion-segment-button#palabrapromo{
+	color: white;
+	background-color: black;
+}
+
