@@ -4,15 +4,85 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
 
-  <ion-navbar>
-    <ion-title>popover</ion-title>
-  </ion-navbar>
+<ion-card-header id="titulo2">
+    <ion-title><h2 id="titulo">Servicios Extras</h2></ion-title>
+</ion-card-header>
 
-</ion-header>
+<div id="cuerpo">
+	<ion-card id="todo">
+	  <ion-card-header id="metodos">
+	    Métodos de pago
+	  </ion-card-header>
 
+	  <ion-card-content id="cajas">
+	  	<ion-row id="filas">
+		  	<div col-2>
+			    <img id="iconos" src="images/metodos/efectivo.png"> 
+		    </div>
+		    <div col-4 id="elementos">
+				Efectivo
+			</div>
 
-<ion-content padding>
+			<div col-2>
+			    <img id="iconos" src="images/metodos/cheque.png">
+		  	</div>
+		  	<div col-4 id="elementos">
+		  		Cheque
+		  	</div>
+		</ion-row>
 
-</ion-content>
+		<ion-row id="filas">
+		  <div col-2>
+			    <img id="iconos" src="images/metodos/credito.png"> 
+		    </div>
+		    <div col-4 id="elementos">
+				Crédito
+			</div>
+
+			<div col-2>
+			    <img id="iconos" src="images/metodos/debito.png">
+		  	</div>
+		  	<div col-4 id="elementos">
+		  		Débito
+		  	</div>
+	    </ion-row>
+	  </ion-card-content>
+
+	</ion-card>
+
+	<ion-card id="todo">
+	  <ion-card-header id="metodos">
+	    Otros servicios
+	  </ion-card-header>
+
+	  <ion-card-content id="cajas">
+	  	<ion-row id="filas">
+		  	<div col-2>
+			    <img id="iconos" src="images/metodos/bip.png"> 
+		    </div>
+		    <div col-4 id="elementos">
+				Carga Bip!
+			</div>
+
+			<div col-2>
+			    <img id="iconos" src="images/metodos/serviestado.png">
+		  	</div>
+		  	<div col-4 id="elementos">
+		  		Caja Vecina
+		  	</div>
+		</ion-row>
+
+		<ion-row id="filas">
+		  	<div col-2>
+			    <img id="iconos" src="images/metodos/multicaja.png"> 
+		    </div>
+		    <div col-4 id="elementos">
+				Multicaja
+			</div>
+		</ion-row>
+	  </ion-card-content>
+
+	</ion-card>
+
+</div>

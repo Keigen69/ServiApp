@@ -1,3 +1,57 @@
-page-popover {
+page-popover{
+	
+}
+
+ion-card-header#metodos{
+	margin-top: -10px;
+	margin-left: -10px;
+	color: white;
+}
+
+h2#titulo{
+	font-size: 20px;
+	margin-top: 1px;
+	background-color: #37a852;
+	color: white;
+}
+
+ion-card-header#titulo2{
+	margin-top: -10px;
+	margin-left: -15px;
+	margin-bottom: -30px;
+	background-color: #37a852;
+}
+
+div#elementos{
+	margin-left: -25px;
+	margin-right: 5px;
+	color: white;
+}
+
+ion-row#filas{
+	margin-right: -50px;
+	margin-top: -10px;
+	margin-bottom: 2px;
+	margin-left: -5px;
+	height: 30px;
+}
+
+ion-card#todo{
+	background-color: #449257;
+	margin-bottom: 5px;
+}
+
+img#iconos{
+	width: 20px;
+	margin-left: -10px;
+}
+
+ion-card-content#cajas{
+	margin-bottom: -15px;
+}
+
+div#cuerpo{
+	background-color: #37a852;
+	padding-bottom: 5px;
 
 }
