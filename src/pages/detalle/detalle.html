@@ -110,24 +110,24 @@
       </button>        
     </div>
 
-    <div col-6 id="numeros" *ngIf="item.whatsapp">
+    <div col-6 id="numeros" *ngIf="item.whatsapp1">
       <button ion-button icon-left outline color="verde"  (click)="llamar(item.whatsapp)">
         <div col-1>
         <ion-icon name="logo-whatsapp" color="verde" id="icono"></ion-icon>
         </div>
          <div col-11>
-        {{item.whatsapp}}
+        {{item.whatsapp1}}
         </div>
       </button>        
     </div>
 
-    <div col-6 id="numeros" *ngIf="item.whatsapp">
+    <div col-6 id="numeros" *ngIf="item.whatsapp2">
       <button ion-button icon-left outline color="verde"  (click)="llamar(item.whatsapp)">
         <div col-1>
         <ion-icon name="logo-whatsapp" color="verde" id="icono"></ion-icon>
         </div>
          <div col-11>
-        {{item.whatsapp}}
+        {{item.whatsapp2}}
         </div>
       </button>        
     </div>
@@ -137,70 +137,41 @@
 
   <div id="divbotones">
   <ion-row id="rowbotones">
-  <div col-2 *ngIf="item.facebook" (click)="abrirWeb(item.facelink)"><img src="/images/iconos/facebook.png"></div>
-  <div col-2 *ngIf="item.instagram" (click)="abrirWeb(item.instalink)"><img src="https://i62.servimg.com/u/f62/12/00/31/40/instag10.png"></div>
-  <div col-2 *ngIf="item.pagweb" (click)="abrirWeb(item.pagweb)"><img src="https://i62.servimg.com/u/f62/12/00/31/40/web10.png"></div>
-  <div col-2 *ngIf="item.correo" (click)="abrirWeb(item.pagweb)"><img src="https://i62.servimg.com/u/f62/12/00/31/40/email10.png"></div>
-  <div col-2 *ngIf="item.direccion" (click)="abrirWeb(item.direlink)"><img src="https://i62.servimg.com/u/f62/12/00/31/40/direcc10.png"></div>
+  <div col-2 *ngIf="item.facebook" (click)="abrirWeb(item.facelink)"><img src="images/iconos/facebook.png"></div>
+  <div col-2 *ngIf="item.instagram" (click)="abrirWeb(item.instalink)"><img src="images/iconos/instagram.png"></div>
+  <div col-2 *ngIf="item.pagweb" (click)="abrirWeb(item.pagweb)"><img src="images/iconos/web.png"></div>
+  <div col-2 *ngIf="item.correo" (click)="abrirWeb(item.pagweb)"><img src="images/iconos/correo.png"></div>
+  <div col-2 *ngIf="item.direccion" (click)="abrirWeb(item.direlink)"><img src="images/iconos/direccion.png"></div>
   </ion-row>
   </div>
 
-<div id="segment">
+<div id="segment" *ngIf="serviextra()">
   <ion-segment [(ngModel)]="pet" id="promo"  color="negro">
-    <ion-segment-button value="promocion" id=palabrapromo>
+    <ion-segment-button value="promocion" id=palabrapromo *ngIf="item.promocion[0].pro">
       Promoción
     </ion-segment-button>
-    <ion-segment-button value="catalogo" id=palabrapromo>
+    <ion-segment-button value="catalogo" id=palabrapromo *ngIf="item.catalogo[0].cat">
       Catálogo
     </ion-segment-button>
   </ion-segment>
-
 </div>
 
-  <div [ngSwitch]="pet">
+<div [ngSwitch]="pet">
   <ion-list *ngSwitchCase="'promocion'">
       <ion-slides pager>
-
-        <ion-slide>
+        <ion-slide *ngFor="let pr of item.promocion">
           <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
         </ion-slide>
-
-        <ion-slide>
-          <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
-        </ion-slide>
-
-        <ion-slide>
-          <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
-        </ion-slide>
-
       </ion-slides>
   </ion-list>
  
   <ion-list *ngSwitchCase="'catalogo'">
     <ion-content id="listaprecio"> 
-    <ion-list id="vamos">
-      <ion-item>Yakizoba<ion-note item-end id="precio">
-      $25.360
-      </ion-note></ion-item>
-      <ion-item>Angola<ion-note item-end id="precio">
-      $25.360
-      </ion-note></ion-item>
-      <ion-item>Angola<ion-note item-end id="precio">
-      $25.360
-      </ion-note></ion-item>
-      <ion-item>Angola<ion-note item-end id="precio">
-      $25.360
-      </ion-note></ion-item>
-      <ion-item>Angola<ion-note item-end id="precio">
-      $25.360
-      </ion-note></ion-item>
-      <ion-item>Angola<ion-note item-end id="precio">
-      $25.360
-      </ion-note></ion-item>
-      <ion-item>Angola<ion-note item-end id="precio">
-      $25.360
-      </ion-note></ion-item>
-    </ion-list>
+      <ion-list id="vamos">
+        <ion-item *ngFor="let ca of item.catalogo">{{ca.cat}}<ion-note item-end id="precio">
+        {{ca.precio}}
+        </ion-note></ion-item>
+      </ion-list>
     </ion-content>
   </ion-list>
 

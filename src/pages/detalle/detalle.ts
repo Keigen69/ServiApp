@@ -21,11 +21,29 @@ export class DetallePage {
   public item;
   phoneNumber: number;
   public pet;
+  public pene = "pene";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private call: CallNumber, public popoverCtrl: PopoverController) {
 
   this.item = navParams.get('item');
-  this.pet = "promocion";
+
+  if(this.item.catalogo[0].cat){
+    this.pet = "catalogo"
+  };
+      
+
+  if(this.item.promocion[0].pro){
+      this.pet = "promocion";
+      
+  };
+
+
+  }
+
+  serviextra(){
+    if(!this.item.catalogo[0].cat && !this.item.promocion[0].pro)
+    this.pene = ""
+    return this.pene;
 
   }
 
@@ -42,11 +60,12 @@ export class DetallePage {
   }
   abrirWeb(pagina:string)
   {
-      window.open("http://" +pagina); 
+      window.open("https://" +pagina); 
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetallePage');
+    console.log(this.item.promocion[0].pro);
   }
 
 }
