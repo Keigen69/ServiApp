@@ -22,10 +22,12 @@ export class DetallePage {
   phoneNumber: number;
   public pet;
   public pene = "pene";
+  public tipo;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private call: CallNumber, public popoverCtrl: PopoverController) {
 
   this.item = navParams.get('item');
+  this.tipo = navParams.get('tp');
 
   if(this.item.catalogo[0].cat){
     this.pet = "catalogo"
@@ -68,7 +70,7 @@ export class DetallePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetallePage');
-    console.log(this.item.promocion[0].pro);
+    console.log(this.tipo);
   }
 
 }

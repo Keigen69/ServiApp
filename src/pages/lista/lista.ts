@@ -30,9 +30,10 @@ export class ListaPage {
   }
 
 
-  goToDetalle(item){
+  goToDetalle(item, tip){
   this.navCtrl.push(DetallePage,{
-    item: item
+    item: item,
+    tp: tip
   });
   }
 

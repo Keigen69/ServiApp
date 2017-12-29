@@ -25,7 +25,7 @@
 <ion-content padding>
   <ion-row>
     <div col-5>
-        <img src="images/logos/{{item.nombre}}.png">      
+        <img src="http://www.serviapp.cl/recursos/clientes/{{tipo}}/{{item.nombre}}/{{item.nombre}}.png">      
     </div>
     <div col-7>
         <div col-12 id="info" class="nombre">
@@ -160,7 +160,7 @@
   <ion-list *ngSwitchCase="'promocion'">
       <ion-slides pager>
         <ion-slide *ngFor="let pr of item.promocion">
-          <img src="https://i.kinja-img.com/gawker-media/image/upload/s--nuwIKL3_--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/wxyubkjmeppxmqasllft.jpg">
+          <img src="http://www.serviapp.cl/recursos/clientes/{{tipo}}/{{item.nombre}}/{{pr.pro}}.png">
         </ion-slide>
       </ion-slides>
   </ion-list>
