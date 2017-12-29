@@ -41,13 +41,10 @@ valor()
 	
 	for(var i of this.item.clientes)
 	{
-		console.log("entro al for");
-		console.log(i.destacado);
 		if(i.destacado)
 		this.aux="si"
 
 	}
-	console.log(this.aux);
 	return this.aux;
 }
 

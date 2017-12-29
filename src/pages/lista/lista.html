@@ -23,7 +23,7 @@
 			<div *ngFor="let in of item.clientes">
 				<ion-item (click)="goToDetalle(in)" *ngIf="in.destacado">
 			      <ion-thumbnail item-start >
-			        <img src="images/logos/{{in.nombre}}.png">
+			        <img src="http://www.serviapp.cl/recursos/clientes/{{item.tipo}}/{{in.nombre}}/{{in.nombre}}.png">
 			      </ion-thumbnail>
 			      <h2>{{ in.nombre }}</h2 >
 			      <h3>{{ in.servicio }}</h3 >
@@ -38,7 +38,7 @@
 	<ion-list>
 	    <ion-item *ngFor="let in of item.clientes" (click)="goToDetalle(in)" >
 	      <ion-thumbnail item-start >
-	        <img src="images/logos/{{in.nombre}}.png">
+	        <img src="http://www.serviapp.cl/recursos/clientes/{{item.tipo}}/{{in.nombre}}/{{in.nombre}}.png">
 	      </ion-thumbnail>
 	      <h2>{{ in.nombre }}</h2>
 	      <h3>{{ in.servicio }}</h3>
