@@ -37,7 +37,10 @@ export class DetallePage {
       
   };
 
+  }
 
+  mailto(email) {
+   window.open(`mailto:${email}`, '_system');
   }
 
   serviextra(){
