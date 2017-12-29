@@ -17,7 +17,7 @@
 
 	  <ion-card-content id="cajas" col-12>
 	  	<ion-row id="wea">
-	  		<div col-6>
+	  		<div col-6 *ngIf="item.efectivo">
 	  			<ion-row id="weaita">
 			  	<div col-3>
 				    <img id="iconos" src="images/metodos/efectivo.png"> 
@@ -28,7 +28,7 @@
 				</ion-row>
 			</div>
 
-			<div col-6>
+			<div col-6 *ngIf="item.cheque">
 				<ion-row id="weaita">
 				<div col-3>
 				    <img id="iconos" src="images/metodos/cheque.png">
@@ -39,7 +39,7 @@
 			  	</ion-row>
 		 	</div>
 			
-			<div col-6>
+			<div col-6 *ngIf="item.credito">
 				<ion-row id="weaita">
 			  	<div col-3>
 				    <img id="iconos" src="images/metodos/credito.png"> 
@@ -50,7 +50,7 @@
 				</ion-row>
 			</div>
 
-			<div col-6>
+			<div col-6 *ngIf="item.debito">
 				<ion-row id="weaita">
 				<div col-3>
 				    <img id="iconos" src="images/metodos/debito.png">
@@ -71,7 +71,7 @@
 
 	  <ion-card-content id="cajas" col-12>
 	  	<ion-row id="wea">
-	  		<div col-6>
+	  		<div col-6 *ngIf="item.cargabit">
 	  			<ion-row id="weaita">
 			  	<div col-3>
 				    <img id="iconos" src="images/metodos/bip.png"> 
@@ -82,7 +82,7 @@
 				</ion-row>
 			</div>
 
-			<div col-6>
+			<div col-6 *ngIf="item.cajavecina">
 				<ion-row id="weaita">
 				<div col-3>
 				    <img id="iconos" src="images/metodos/serviestado.png">
@@ -93,7 +93,7 @@
 			  	</ion-row>
 		 	</div>
 			
-			<div col-6>
+			<div col-6 *ngIf="item.multicaja">
 				<ion-row id="weaita">
 			  	<div col-3>
 				    <img id="iconos" src="images/metodos/multicaja.png"> 

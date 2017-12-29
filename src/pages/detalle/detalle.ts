@@ -47,8 +47,8 @@ export class DetallePage {
 
   }
 
-  presentPopover(myEvent) {
-    let popover = this.popoverCtrl.create(PopoverPage);
+  presentPopover(myEvent, item) {
+    let popover = this.popoverCtrl.create(PopoverPage,item);
     popover.present({
       ev: myEvent
     });

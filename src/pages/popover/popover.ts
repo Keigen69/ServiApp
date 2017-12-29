@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ViewController } from 'ionic-angular';
+import { DetallePage } from '../detalle/detalle';
+
 
 /**
  * Generated class for the PopoverPage page.
@@ -17,7 +19,12 @@ import { ViewController } from 'ionic-angular';
 })
 export class PopoverPage {
 
+  public item;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
+
+  this.item = navParams.data;
+
   }
 
   close() {
@@ -26,6 +33,7 @@ export class PopoverPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PopoverPage');
+    console.log(this.item);
   }
 
 }
