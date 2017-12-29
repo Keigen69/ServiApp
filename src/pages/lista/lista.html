@@ -36,7 +36,7 @@
 
 
 	<ion-list>
-	    <ion-item *ngFor="let in of item.clientes" (click)="goToDetalle(in)" >
+	    <ion-item *ngFor="let in of item.clientes" (click)="goToDetalle(in,item.tipo)" >
 	      <ion-thumbnail item-start >
 	        <img src="http://www.serviapp.cl/recursos/clientes/{{item.tipo}}/{{in.nombre}}/{{in.nombre}}.png">
 	      </ion-thumbnail>
