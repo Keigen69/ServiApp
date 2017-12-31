@@ -10,6 +10,10 @@ import { ListPage } from '../pages/list/list';
 import { ListaPage } from '../pages/lista/lista';
 import { DetallePage } from '../pages/detalle/detalle';
 import { PopoverPage } from '../pages/popover/popover';
+import { TutorialPage } from '../pages/tutorial/tutorial';
+import { ContactoPage } from '../pages/contacto/contacto';
+import { ServiciosPage } from '../pages/servicios/servicios';
+import { FaqPage } from '../pages/faq/faq';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,7 +27,11 @@ import { CallNumber } from '@ionic-native/call-number';
     ListPage,
     ListaPage,
     DetallePage,
-    PopoverPage
+    PopoverPage,
+    TutorialPage,
+    ContactoPage,
+    ServiciosPage,
+    FaqPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +46,11 @@ import { CallNumber } from '@ionic-native/call-number';
     ListPage,
     ListaPage,
     DetallePage,
-    PopoverPage
+    PopoverPage,
+    TutorialPage,
+    ContactoPage,
+    ServiciosPage,
+    FaqPage
   ],
   providers: [
     StatusBar,

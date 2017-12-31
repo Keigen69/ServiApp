@@ -12,70 +12,70 @@
 
   <ion-row id="cate">
 
-    <div col-6>
-      <ion-card (click)="goToLista(comida)">
+    <div col-6 *ngFor="let comi of comida">
+      <ion-card (click)="goToListaComida(comi)">
         <img src="images/fondos/comida.jpg"/>
-        <div class="card-title">COMIDA</div>
-        <div class="card-subtitle">Sushi - Pizeria - Delivery</div>
+        <div class="card-title">{{comi.tipo}}</div>
+        <div class="card-subtitle">{{comi.subtitulo}}</div>
       </ion-card>
     </div>
 
-    <div col-6>
-      <ion-card (click)="goToLista(serviciotecnico)">
+    <div col-6 *ngFor="let servi of serviciotecnico">
+      <ion-card (click)="goToListaTecnico(servi)">
         <img src="images/fondos/serviciotecnico.jpg"/>
-        <div class="card-title">TÉCNICO</div>
-        <div class="card-subtitle">Gásfiter - Eléctrico - Computación</div>
+        <div class="card-title">{{servi.tipo}}</div>
+        <div class="card-subtitle">{{servi.subtitulo}}</div>
       </ion-card>
     </div>
    
   </ion-row>
 
   <ion-row id="cate">
-    <div col-6>
-      <ion-card (click)="goToLista(transporte)">
+    <div col-6 *ngFor="let tran of transporte">
+      <ion-card (click)="goToListaTran(tran)">
         <img src="images/fondos/transporte.jpg"/>
-        <div class="card-title">TRANSPORTE</div>
-        <div class="card-subtitle">Radio Taxi - Fletes - Mudanzas</div>
+        <div class="card-title">{{tran.tipo}}</div>
+        <div class="card-subtitle">{{tran.subtitulo}}</div>
       </ion-card>
     </div>
-    <div col-6>
-      <ion-card (click)="goToLista(belleza)">
+    <div col-6 *ngFor="let belle of belleza">
+      <ion-card (click)="goToListaBelle(belle)">
         <img src="images/fondos/belleza.jpg"/>
-        <div class="card-title">BELLEZA</div>
-        <div class="card-subtitle">Peluquería - Podología - Masajes</div>
+        <div class="card-title">{{belle.tipo}}</div>
+        <div class="card-subtitle">{{belle.subtitulo}}</div>
       </ion-card>
     </div>
   </ion-row>
 
   <ion-row id="cate">
-    <div col-6>
-      <ion-card (click)="goToLista(mascotas)">
+    <div col-6 *ngFor="let masco of mascotas">
+      <ion-card (click)="goToListaMasco(masco)">
         <img src="images/fondos/mascotas.jpg"/>
-        <div class="card-title">MASCOTAS</div>
-        <div class="card-subtitle">Veterinaria - Peluquería - Alimentos</div>
+        <div class="card-title">{{masco.tipo}}</div>
+        <div class="card-subtitle">{{masco.subtitulo}}</div>
       </ion-card>
     </div>
-    <div col-6> 
-      <ion-card (click)="goToLista(negocios)">
+    <div col-6 *ngFor="let nego of negocios"> 
+      <ion-card (click)="goToListaNego(nego)">
         <img src="images/fondos/negocios.jpg"/>
-        <div class="card-title">NEGOCIOS</div>
-        <div class="card-subtitle">Almacén - Ferretería - Aseo</div>
+        <div class="card-title">{{nego.tipo}}</div>
+        <div class="card-subtitle">{{nego.subtitulo}}</div>
       </ion-card>
     </div>
   </ion-row>
 
   <ion-row id="cate">
-    <div col-6>
-      <ion-card (click)="goToLista(salud)">
+    <div col-6 *ngFor="let sal of salud">
+      <ion-card (click)="goToListaSal(sal)">
         <img src="images/fondos/salud.jpg"/>
-        <div class="card-title">SALUD</div>
-        <div class="card-subtitle">Gimnasio - Farmacia - Médico</div>
+        <div class="card-title">{{sal.tipo}}</div>
+        <div class="card-subtitle">{{sal.subtitulo}}</div>
       </ion-card>
     </div>
-    <div col-6>
-      <ion-card (click)="goToLista(otros)">
+    <div col-6 *ngFor="let otr of otros">
+      <ion-card (click)="goToListaOtr(otr)">
         <img src="images/fondos/otros.jpg"/>
-        <div class="card-title">OTROS</div>
+        <div class="card-title">{{otr.tipo}}</div>
         <div class="card-subtitle"></div>
       </ion-card>
     </div>
