@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ContactoPage } from '../contacto/contacto';
 
 /**
  * Generated class for the FaqPage page.
@@ -22,4 +23,11 @@ export class FaqPage {
     console.log('ionViewDidLoad FaqPage');
   }
 
+	 goToContactoPage(){
+	  this.navCtrl.push(ContactoPage)
+	  
+	}
+
+
 }
+
