@@ -6,13 +6,27 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>servicios</ion-title>
+  <ion-navbar color="verdeapp">
+    <ion-searchbar (ionInput)="getItems($event)" placeholder="Busca tu servicio"></ion-searchbar>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+	<ion-list>
+		<div *ngFor="let ser of clone">
+				<ion-item >
+			      <ion-thumbnail item-start >
+			        <img src="http://www.serviapp.cl/recursos/clientes/{{ser.tipo}}/{{ser.nombre}}/{{ser.nombre}}.png">
+			      </ion-thumbnail>
+			      <h2>{{ ser.nombre }}</h2>
+			      <h3>{{ ser.servicio }}</h3>
+			      <h2>{{ ser.whatsapp }}</h2>
+			      <p>{{ ser.direccion }}</p>
+			    </ion-item>		
+		</div>	    
+	  </ion-list>
 
 </ion-content>
