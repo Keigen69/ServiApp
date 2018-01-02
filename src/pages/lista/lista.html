@@ -27,7 +27,7 @@
 			      </ion-thumbnail>
 			      <h2>{{ in.nombre }}</h2>
 			      <h3>{{ in.servicio }}</h3>
-			      <p *ngIf="in.domicilio"><ion-icon name="md-bicycle" color="rojo"></ion-icon> {{in.domicilio}} </p>
+			      <p *ngIf="in.domicilio"><ion-icon name="md-bicycle" color="rojo"></ion-icon> {{ in.domicilio }} </p>
 			      <p>{{ in.direccion }}</p>
 			      <ion-icon name="ios-call" color="verde" item-end></ion-icon>
 			    </ion-item>
@@ -43,7 +43,7 @@
 	      </ion-thumbnail>
 	      <h2>{{ in.nombre }}</h2>
 	      <h3>{{ in.servicio }}</h3>
-	      <h2>{{ in.whatsapp }}</h2>
+	      <p *ngIf="in.domicilio"><ion-icon name="md-bicycle" color="rojo"></ion-icon> {{ in.domicilio }} </p>
 	      <p>{{ in.direccion }}</p>
 	    </ion-item>
 	  </ion-list>
