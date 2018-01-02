@@ -18,16 +18,17 @@
 	<div *ngIf="valor()">
 	<ion-list id="destacado2" >
 		<div id="destacado">
-			<ion-item-divider >DESTACADOS</ion-item-divider>
+			<ion-item-divider>DESTACADOS</ion-item-divider>
 		</div>
 			<div *ngFor="let in of item.clientes">
 				<ion-item (click)="goToDetalle(in,item.tipo)" *ngIf="in.destacado">
 			      <ion-thumbnail item-start >
 			        <img src="http://www.serviapp.cl/recursos/clientes/{{item.tipo}}/{{in.nombre}}/{{in.nombre}}.png">
 			      </ion-thumbnail>
-			      <h2>{{ in.nombre }}</h2 >
-			      <h3>{{ in.servicio }}</h3 >
-			      <p>{{ in.direccion }}</p >
+			      <h2>{{ in.nombre }}</h2>
+			      <h3>{{ in.servicio }}</h3>
+			      <p *ngIf="in.domicilio"><ion-icon name="md-bicycle" color="rojo"></ion-icon> {{in.domicilio}} </p>
+			      <p>{{ in.direccion }}</p>
 			      <ion-icon name="ios-call" color="verde" item-end></ion-icon>
 			    </ion-item>
 		    </div>
