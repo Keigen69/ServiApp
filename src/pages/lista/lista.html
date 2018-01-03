@@ -71,9 +71,9 @@
 	    <ion-item *ngFor="let in of item.clientes" (click)="goToDetalle(in,item.tipo)" >
 	      <ion-thumbnail item-start >
 	        <img src="http://www.serviapp.cl/recursos/clientes/{{item.tipo}}/{{in.nombre}}/{{in.nombre}}.png">
-	        <div *ngIf="in.destacado == 3" id="estrellas"><ion-icon name="md-star" color="naranjo"></ion-icon><ion-icon name="md-star" color="naranjo"></ion-icon><ion-icon name="md-star" color="naranjo"></ion-icon></div>
+	        <div *ngIf="in.destacado == 1" id="estrellas"><ion-icon name="md-star" color="naranjo"></ion-icon><ion-icon name="md-star" color="naranjo"></ion-icon><ion-icon name="md-star" color="naranjo"></ion-icon></div>
 	        <div *ngIf="in.destacado == 2" id="estrellas"><ion-icon name="md-star" color="naranjo"></ion-icon><ion-icon name="md-star" color="naranjo"></ion-icon></div>
-	        <div *ngIf="in.destacado == 1" id="estrellas"><ion-icon name="md-star" color="naranjo"></ion-icon></div>
+	        <div *ngIf="in.destacado == 3" id="estrellas"><ion-icon name="md-star" color="naranjo"></ion-icon></div>
 	      </ion-thumbnail>
 	      <h2>{{ in.nombre }}</h2>
 	      <h3>{{ in.servicio }}</h3>
