@@ -21,6 +21,11 @@ div#info{
 	text-align: center;
 }
 
+div#infodelivery{
+	text-align: center;
+	color: #ff0000;
+}
+
 div#info.nombre{
 	font-weight: bold;
 	font-size: 6.5vw;
@@ -110,3 +115,6 @@ ion-segment-button#palabrapromo{
 	background-color: black;
 }
 
+h4#delivery{
+	color: #ff0000;
+}
