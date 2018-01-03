@@ -79,6 +79,7 @@
 	      <h3>{{ in.servicio }}</h3>
 	      <p *ngIf="in.domicilio" id="delivery"><ion-icon name="md-bicycle" color="rojo"></ion-icon> {{ in.domicilio }} </p>
 	      <p>{{ in.direccion }}</p>
+	      <ion-icon name="ios-call" color="verde" (click)="llamar(in.teldestacado)" *ngIf="in.destacado" item-end></ion-icon>
 	    </ion-item>
 	  </ion-list>
 
