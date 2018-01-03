@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { DetallePage } from '../detalle/detalle';
 
 /**
  * Generated class for the ServiciosPage page.
@@ -87,7 +88,12 @@ export class ServiciosPage {
     console.log(this.clone);
   }
 
-
+   goToDetalle(item, tip){
+  this.navCtrl.push(DetallePage,{
+    item: item,
+    tp: tip
+  });
+  }
 
 
   ionViewDidLoad() {

@@ -17,7 +17,7 @@
 
 	<ion-list>
 		<div *ngFor="let ser of clone">
-				<ion-item >
+				<ion-item (click)="goToDetalle(ser,ser.tipo)">
 			      <ion-thumbnail item-start >
 			        <img src="http://www.serviapp.cl/recursos/clientes/{{ser.tipo}}/{{ser.nombre}}/{{ser.nombre}}.png">
 			      </ion-thumbnail>
