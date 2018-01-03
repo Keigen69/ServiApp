@@ -47,11 +47,12 @@ export class ListaPage {
 	
 	for(var i of this.item.clientes)
 	{
+    console.log(i.destacado);  
 		if(i.destacado)
-		this.aux="si"
-
+		this.aux="si";
+    return this.aux;
 	}
-	return this.aux;
+	
   }
 
   ionViewDidLoad() {
