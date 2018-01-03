@@ -70,7 +70,7 @@ export class DetallePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetallePage');
-    console.log(this.tipo);
+    console.log(this.item);
   }
 
 }

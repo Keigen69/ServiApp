@@ -37,6 +37,11 @@
         <div col-12 id="info">
           <ion-icon name="md-pin" color="rojo"></ion-icon> {{item.direccion}}
         </div>
+
+        <div col-12 id="info" *ngIf="item.domicilio">
+          <ion-icon name="md-bicycle" color="rojo"></ion-icon> {{item.domicilio}}
+        </div>
+
     </div>
   </ion-row>
 
@@ -49,9 +54,7 @@
         </div>
         <div col-11>
           {{item.telfijo1}}
-        </div>
-        
-        
+        </div>  
       </button>        
     </div>
 
