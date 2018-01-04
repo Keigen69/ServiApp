@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1028381163976",
+    "firebase_url": "https://serviapp-db.firebaseio.com",
+    "project_id": "serviapp-db",
+    "storage_bucket": "serviapp-db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028381163976:android:d97eea8b2eedf512",
+        "android_client_info": {
+          "package_name": "io.ionic.serviapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028381163976-nr5u17bu28j9008570vs5dsnhcbg2ksp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc2eYD344lNI7o4ELBcR1HQwodjvVQh7c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
