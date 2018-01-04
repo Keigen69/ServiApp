@@ -2,59 +2,58 @@ page-popover{
 	
 }
 
-ion-card-header#metodos{
-	margin-top: -10px;
-	margin-left: -10px;
+
+ion-list-header#titulo1{
+	margin-top: -1px;
 	margin-bottom: -10px;
-	color: white;
-}
-
-h2#titulo{
-	font-size: 20px;
-	margin-top: 1px;
-	background-color: #37a852;
-	color: white;
-}
-
-ion-card-header#titulo2{
-	margin-top: -10px;
-	margin-left: -15px;
-	margin-bottom: -30px;
-	background-color: #37a852;
-}
-
-div#elementos{
-	color: white;
-
+	background-color: #00aa4b;
+	color: #ffffff;
 
 }
 
-ion-row#weaita{
-	margin-left: -10px;
+ion-list-header#titulo2{
+	margin-top: -1px;
+	margin-bottom: -10px;
+	background-color: #00aa4b;
+	color: #ffffff;
 
 }
 
-ion-card#todo{
-	background-color: #449257;
-	margin-left: -5px;
-}
-
-img#iconos{
+img#icono1{
+	width: 25px;
+	margin-right: 5px;
+	margin-bottom: -3px;
 
 }
 
-ion-card-content#cajas{
-	margin-bottom: -15px;
+img#icono2{
+	width: 20px;
+	margin-right: 0px;
+	margin-bottom: -3px;
+}
+
+ion-list#caja1{
+	background-color: #b2d7c2;
+	margin-bottom: -5px;
 
 }
 
-div#cuerpo{
-	background-color: #37a852;
-	padding-bottom: 5px;
+ion-list#caja2{
+	margin-bottom: 0px;
+	background-color: #b2d7c2;
 
 }
 
-ion-row#wea{
-	margin-left: 1px;
+ion-item#elemento{
+	background-color: #b2d7c2;
+	height: 15px;
 
+}
+
+ion-row#row{
+
+}
+
+content#titulo1{
+	margin-bottom: 30px;
 }

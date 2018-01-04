@@ -5,107 +5,32 @@
   Ionic pages and navigation.
 -->
 
-<ion-card-header id="titulo2">
-    <ion-title><h2 id="titulo">Servicios Extras</h2></ion-title>
-</ion-card-header>
 
-<div id="cuerpo">
-	<ion-card id="todo" col-12>
-	  <ion-card-header id="metodos">
-	    Métodos de pago
-	  </ion-card-header>
+<content>
+	
+	<ion-list-header id="titulo1">
+	 Medios de pago
+	</ion-list-header>
+	
+	<ion-list id="caja1">
+	  <ion-row id="row">
+	  <ion-item id="elemento" col-6 *ngIf="item.efectivo"><h3><img src="images/metodos/efectivo.png" id="icono1">Efectivo</h3></ion-item>
+	  <ion-item id="elemento" col-6 *ngIf="item.credito"><h3><img src="images/metodos/credito.png" id="icono1">Crédito</h3></ion-item>
+	  <ion-item id="elemento" col-6 *ngIf="item.debito"><h3><img src="images/metodos/debito.png" id="icono1">Débito</h3></ion-item>
+	  <ion-item id="elemento" col-6 *ngIf="item.cheque"><h3><img src="images/metodos/cheque.png" id="icono1">Cheque</h3></ion-item>
+	  <ion-item id="elemento" col-6 *ngIf="item.junaeb"><h3><img src="images/metodos/junaeb.png" id="icono1">Junaeb</h3></ion-item>
+	  <ion-item id="elemento" col-6 *ngIf="item.ticket"><h3><img src="images/metodos/ticket.png" id="icono1">Ticket</h3></ion-item>
+	  </ion-row>
+	</ion-list>
 
-	  <ion-card-content id="cajas" col-12>
-	  	<ion-row id="wea">
-	  		<div col-6 *ngIf="item.efectivo">
-	  			<ion-row id="weaita">
-			  	<div col-3>
-				    <img id="iconos" src="images/metodos/efectivo.png"> 
-			    </div>
-			    <div col-9 id="elementos">
-					Efectivo
-				</div>
-				</ion-row>
-			</div>
+	<ion-list-header id="titulo2" *ngIf="item.cargabip == 'si' || item.cajavecina == 'si' || item.multicaja == 'si'">
+	  Otros servicios
+	</ion-list-header>
 
-			<div col-6 *ngIf="item.cheque">
-				<ion-row id="weaita">
-				<div col-3>
-				    <img id="iconos" src="images/metodos/cheque.png">
-			  	</div>
-			  	<div col-9 id="elementos">
-			  		Cheque
-			  	</div>
-			  	</ion-row>
-		 	</div>
-			
-			<div col-6 *ngIf="item.credito">
-				<ion-row id="weaita">
-			  	<div col-3>
-				    <img id="iconos" src="images/metodos/credito.png"> 
-			    </div>
-			    <div col-9 id="elementos">
-					Crédito
-				</div>
-				</ion-row>
-			</div>
+	<ion-list id="caja2">
+	  <ion-item id="elemento" *ngIf="item.cargabip"><h3><img src="images/metodos/bip.png" id="icono2">Carga Bip!</h3></ion-item>
+	  <ion-item id="elemento" *ngIf="item.cajavecina"><h3><img src="images/metodos/serviestado.png" id="icono2">Caja Vecina</h3></ion-item>
+	  <ion-item id="elemento" *ngIf="item.multicaja"><h3><img src="images/metodos/multicaja.png" id="icono2">Multicaja</h3></ion-item>
+	</ion-list>
 
-			<div col-6 *ngIf="item.debito">
-				<ion-row id="weaita">
-				<div col-3>
-				    <img id="iconos" src="images/metodos/debito.png">
-			  	</div>
-			  	<div col-9 id="elementos">
-			  		Débito
-			  	</div>
-			  </ion-row>
-		  	</div>
-	    </ion-row>
-	  </ion-card-content>
-	</ion-card>
-
-	<ion-card id="todo" col-12>
-	  <ion-card-header id="metodos">
-	    Otros servicios
-	  </ion-card-header>
-
-	  <ion-card-content id="cajas" col-12>
-	  	<ion-row id="wea">
-	  		<div col-6 *ngIf="item.cargabip">
-	  			<ion-row id="weaita">
-			  	<div col-3>
-				    <img id="iconos" src="images/metodos/bip.png"> 
-			    </div>
-			    <div col-9 id="elementos">
-					Carga Bip!
-				</div>
-				</ion-row>
-			</div>
-
-			<div col-6 *ngIf="item.cajavecina">
-				<ion-row id="weaita">
-				<div col-3>
-				    <img id="iconos" src="images/metodos/serviestado.png">
-			  	</div>
-			  	<div col-9 id="elementos">
-			  		Caja Vecina
-			  	</div>
-			  	</ion-row>
-		 	</div>
-			
-			<div col-6 *ngIf="item.multicaja">
-				<ion-row id="weaita">
-			  	<div col-3>
-				    <img id="iconos" src="images/metodos/multicaja.png"> 
-			    </div>
-			    <div col-9 id="elementos">
-					Multicaja
-				</div>
-				</ion-row>
-			</div>
-		</ion-row>
-	  </ion-card-content>
-
-	</ion-card>
-
-</div>
+</content> 
