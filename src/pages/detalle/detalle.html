@@ -114,7 +114,7 @@
     </div>
 
     <div col-6 id="numeros" *ngIf="item.whatsapp1">
-      <button ion-button icon-left outline color="verde"  (click)="llamar(item.whatsapp1)">
+      <button ion-button icon-left outline color="verde"  (click)="llamar(item.whatsapp)">
         <div col-1>
         <ion-icon name="logo-whatsapp" color="verde" id="icono"></ion-icon>
         </div>
@@ -125,7 +125,7 @@
     </div>
 
     <div col-6 id="numeros" *ngIf="item.whatsapp2">
-      <button ion-button icon-left outline color="verde"  (click)="llamar(item.whatsapp2)">
+      <button ion-button icon-left outline color="verde"  (click)="llamar(item.whatsapp)">
         <div col-1>
         <ion-icon name="logo-whatsapp" color="verde" id="icono"></ion-icon>
         </div>
@@ -148,13 +148,16 @@
   </ion-row>
   </div>
 
-<div id="segment" *ngIf="serviextra()">
+<div id="segment" >
   <ion-segment [(ngModel)]="pet" id="promo"  color="negro">
     <ion-segment-button value="promocion" id=palabrapromo *ngIf="item.promocion[0].pro">
       Promoción
     </ion-segment-button>
     <ion-segment-button value="catalogo" id=palabrapromo *ngIf="item.catalogo[0].cat">
       Catálogo
+    </ion-segment-button>
+    <ion-segment-button value="horario" id=palabrapromo >
+      Horario
     </ion-segment-button>
   </ion-segment>
 </div>
@@ -177,6 +180,20 @@
       </ion-list>
     </ion-content>
   </ion-list>
+
+<ion-list *ngSwitchCase="'horario'">
+    <ion-content id="listaprecio"> 
+      <ion-list id="vamos">
+        <ion-item *ngFor="let ca of item.horario">{{ca.hor}}<ion-note item-end id="precio">
+        {{ca.hora}}
+        </ion-note></ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-list>
+
+  
+
+
 
 </div>
 

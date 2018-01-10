@@ -29,6 +29,11 @@ export class DetallePage {
   this.item = navParams.get('item');
   this.tipo = navParams.get('tp');
 
+  if(this.item.horario[0].hor){
+      this.pet = "horario";
+      
+  };
+
   if(this.item.catalogo[0].cat){
     this.pet = "catalogo"
   };
@@ -38,6 +43,8 @@ export class DetallePage {
       this.pet = "promocion";
       
   };
+
+   
 
   }
 
