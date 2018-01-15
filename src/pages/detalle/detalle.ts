@@ -70,6 +70,12 @@ export class DetallePage {
   {
        window.open("tel:" + mobNumber);
   }
+
+  abrirWhatsapp(wa:string)
+  {
+      window.open("https://api.whatsapp.com/send?phone=" + wa);
+  }
+
   abrirWeb(pagina:string)
   {
       window.open("https://" +pagina); 
