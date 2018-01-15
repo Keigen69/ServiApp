@@ -20,24 +20,6 @@
       </ion-card>
     </div>
 
-    <div col-6 *ngFor="let servi of serviciotecnico">
-      <ion-card (click)="goToListaTecnico(servi)">
-        <img src="images/fondos/serviciotecnico.jpg"/>
-        <div class="card-title">{{servi.tipo}}</div>
-        <div class="card-subtitle">{{servi.subtitulo}}</div>
-      </ion-card>
-    </div>
-   
-  </ion-row>
-
-  <ion-row id="cate">
-    <div col-6 *ngFor="let tran of transporte">
-      <ion-card (click)="goToListaTran(tran)">
-        <img src="images/fondos/transporte.jpg"/>
-        <div class="card-title">{{tran.tipo}}</div>
-        <div class="card-subtitle">{{tran.subtitulo}}</div>
-      </ion-card>
-    </div>
     <div col-6 *ngFor="let belle of belleza">
       <ion-card (click)="goToListaBelle(belle)">
         <img src="images/fondos/belleza.jpg"/>
@@ -45,9 +27,19 @@
         <div class="card-subtitle">{{belle.subtitulo}}</div>
       </ion-card>
     </div>
+   
   </ion-row>
 
   <ion-row id="cate">
+
+    <div col-6 *ngFor="let servi of serviciotecnico">
+      <ion-card (click)="goToListaTecnico(servi)">
+        <img src="images/fondos/serviciotecnico.jpg"/>
+        <div class="card-title">{{servi.tipo}}</div>
+        <div class="card-subtitle">{{servi.subtitulo}}</div>
+      </ion-card>
+    </div>
+
     <div col-6 *ngFor="let masco of mascotas">
       <ion-card (click)="goToListaMasco(masco)">
         <img src="images/fondos/mascotas.jpg"/>
@@ -55,16 +47,9 @@
         <div class="card-subtitle">{{masco.subtitulo}}</div>
       </ion-card>
     </div>
-    <div col-6 *ngFor="let nego of negocios"> 
-      <ion-card (click)="goToListaNego(nego)">
-        <img src="images/fondos/negocios.jpg"/>
-        <div class="card-title">{{nego.tipo}}</div>
-        <div class="card-subtitle">{{nego.subtitulo}}</div>
-      </ion-card>
-    </div>
   </ion-row>
-
-  <ion-row id="cate">
+  
+    <ion-row id="cate">
     <div col-6 *ngFor="let sal of salud">
       <ion-card (click)="goToListaSal(sal)">
         <img src="images/fondos/salud.jpg"/>
@@ -72,11 +57,34 @@
         <div class="card-subtitle">{{sal.subtitulo}}</div>
       </ion-card>
     </div>
+  
+    <div col-6 *ngFor="let nego of negocios"> 
+      <ion-card (click)="goToListaNego(nego)">
+        <img src="images/fondos/negocios.jpg"/>
+        <div class="card-title">{{nego.tipo}}</div>
+        <div class="card-subtitle">{{nego.subtitulo}}</div>
+      </ion-card>
+    </div>
+  </ion-row>   
+  
+
+    
+
+  <ion-row id="cate">
+    
     <div col-6 *ngFor="let otr of otros">
       <ion-card (click)="goToListaOtr(otr)">
         <img src="images/fondos/otros.jpg"/>
         <div class="card-title">{{otr.tipo}}</div>
         <div class="card-subtitle"></div>
+      </ion-card>
+    </div>
+
+    <div col-6 *ngFor="let tran of transporte">
+      <ion-card (click)="goToListaTran(tran)">
+        <img src="images/fondos/transporte.jpg"/>
+        <div class="card-title">{{tran.tipo}}</div>
+        <div class="card-subtitle">{{tran.subtitulo}}</div>
       </ion-card>
     </div>
   </ion-row>
