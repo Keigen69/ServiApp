@@ -6,7 +6,7 @@
 -->
 
 
-<content>
+<content id="todo">
 	
 	<ion-list-header id="titulo1">
 	 Medios de pago
@@ -14,12 +14,13 @@
 	
 	<ion-list id="caja1">
 	  <ion-row id="row">
-	  <ion-item id="elemento" col-6 *ngIf="item.efectivo"><h3><img src="images/metodos/efectivo.png" id="icono1">Efectivo</h3></ion-item>
-	  <ion-item id="elemento" col-6 *ngIf="item.credito"><h3><img src="images/metodos/credito.png" id="icono1">Crédito</h3></ion-item>
-	  <ion-item id="elemento" col-6 *ngIf="item.debito"><h3><img src="images/metodos/debito.png" id="icono1">Débito</h3></ion-item>
-	  <ion-item id="elemento" col-6 *ngIf="item.cheque"><h3><img src="images/metodos/cheque.png" id="icono1">Cheque</h3></ion-item>
-	  <ion-item id="elemento" col-6 *ngIf="item.junaeb"><h3><img src="images/metodos/junaeb.png" id="icono1">Junaeb</h3></ion-item>
-	  <ion-item id="elemento" col-6 *ngIf="item.ticket"><h3><img src="images/metodos/ticket.png" id="icono1">Ticket</h3></ion-item>
+	  <ion-item id="elemento" col-12 *ngIf="item.efectivo"><h3><img src="images/metodos/efectivo.png" id="icono1">Efectivo</h3></ion-item>
+	  <ion-item id="elemento" col-12 *ngIf="item.credito"><h3><img src="images/metodos/credito.png" id="icono1">Crédito</h3></ion-item>
+	  <ion-item id="elemento" col-12 *ngIf="item.debito"><h3><img src="images/metodos/debito.png" id="icono1">RedCompra</h3></ion-item>
+	  <ion-item id="elemento" col-12 *ngIf="item.cheque"><h3><img src="images/metodos/cheque.png" id="icono1">Cheque</h3></ion-item>
+	  <ion-item id="elemento" col-12 *ngIf="item.junaeb"><h3><img src="images/metodos/junaeb.png" id="icono1">Junaeb</h3></ion-item>
+	  <ion-item id="elemento" col-12 *ngIf="item.ticket"><h3><img src="images/metodos/ticket.png" id="icono1">Ticket</h3></ion-item>
+	  <ion-item id="elemento" col-12 *ngIf="item.transferencia"><h3><img src="images/metodos/transferencia.png" id="icono1">Transferencia</h3></ion-item>
 	  </ion-row>
 	</ion-list>
 

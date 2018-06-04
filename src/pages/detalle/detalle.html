@@ -13,7 +13,7 @@
     <ion-title>{{item.nombre}}</ion-title> 
     <ion-buttons end>
       <button ion-button icon-only color="royal" (click)="presentPopover($event,item)">
-        <ion-icon name="md-information-circle"></ion-icon>
+        <ion-icon name="logo-usd"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
@@ -34,7 +34,7 @@
         <div col-12 id="info">
           {{item.servicio}}
         </div>
-        <div col-12 id="info">
+        <div col-12 id="info" *ngIf="item.direccion">
           <ion-icon name="md-pin" color="rojo"></ion-icon> {{item.direccion}}
         </div>
 
@@ -164,39 +164,30 @@
 
 <div [ngSwitch]="pet">
   <ion-list *ngSwitchCase="'promocion'">
-      <ion-slides pager>
+      <ion-slides pager loop="true">
         <ion-slide *ngFor="let pr of item.promocion">
-          <img src="http://www.serviapp.cl/recursos/clientes/{{tipo}}/{{item.nombre}}/{{pr.pro}}.png">
+          <img src="http://www.serviapp.cl/recursos/clientes/{{tipo}}/{{item.nombre}}/{{pr.pro}}.png" imageViewer>
         </ion-slide>
       </ion-slides>
   </ion-list>
  
   <ion-list *ngSwitchCase="'catalogo'">
-    <ion-content id="listaprecio"> 
-      <ion-list id="vamos">
-        <ion-item *ngFor="let ca of item.catalogo">{{ca.cat}}<ion-note item-end id="precio">
-        {{ca.precio}}
-        </ion-note></ion-item>
-      </ion-list>
-    </ion-content>
+      <ion-slides pager loop="true">
+        <ion-slide *ngFor="let ca of item.catalogo">
+          <img src="http://www.serviapp.cl/recursos/clientes/{{tipo}}/{{item.nombre}}/{{ca.cat}}.png" imageViewer>
+        </ion-slide>
+      </ion-slides>
   </ion-list>
 
-<ion-list *ngSwitchCase="'horario'">
-    <ion-content id="listaprecio"> 
-      <ion-list id="vamos">
-        <ion-item *ngFor="let ca of item.horario">{{ca.hor}}<ion-note item-end id="precio">
-        {{ca.hora}}
-        </ion-note></ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-list>
+  <ion-content *ngSwitchCase="'horario'"  id="horario">
+  <ion-item-group *ngFor="let ca of item.horario">
+    <ion-item-divider color="verdeapp">{{ca.dia}}</ion-item-divider>
+    <ion-item *ngFor="let pe of ca.hora" text-center>{{pe.hr}}</ion-item>
+  </ion-item-group>
 
-
-
+  </ion-content>
 
 
 </div>
-
+  
 </ion-content>
-
-
