@@ -18,6 +18,7 @@ import { FaqPage } from '../pages/faq/faq';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { CallNumber } from '@ionic-native/call-number';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { CallNumber } from '@ionic-native/call-number';
     IonicModule.forRoot(MyApp),
     HttpClientModule, 
     HttpModule,
+    IonicImageViewerModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
