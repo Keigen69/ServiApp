@@ -26,7 +26,7 @@ export class HomePage {
 
   this.posts = null;
    
-  this.http.get('http://serviapp.cl/recursos/DB1.json').map(res => res.json()).subscribe(data => {
+  this.http.get('http://serviapp.cl/recursos/prueba.json').map(res => res.json()).subscribe(data => {
       this.posts = data.categorias;
       this.comida = this.posts[0].comida;
       this.serviciotecnico = this.posts[1].serviciotecnico;
