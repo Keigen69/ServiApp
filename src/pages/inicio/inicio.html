@@ -14,27 +14,43 @@
 
 
 <ion-content padding>
-<img src="images/logofrase.png" width="200" height="auto">
-<ion-searchbar (click)="goToServicios()" placeholder="Buscar servicio o negocio"></ion-searchbar>
-<button ion-button round color="verdeapp" (click)="goToCategorias()">Categorías</button>
-<button ion-button round color="verdeapp" (click)="goToFavoritos()">Favoritos</button>
-<ion-card>
+	<img src="images/logo.png" height="200" id="logo">
 
-  <ion-card-header>
-   publicidad
-  </ion-card-header>
+	<ion-searchbar (click)="goToServicios()" placeholder="Buscar servicio o negocio"></ion-searchbar>
 
-  <ion-card-content>
-    publicidad publicidad publicidad publicidad publicidad publicidad publicidad publicidad<!-- Add card content here! -->
-  </ion-card-content>
+	<ion-row>
+		<div col-6 id="botones">
+			<button ion-button icon-left round color="verdeapp" (click)="goToCategorias()">
+			    <div col-1><ion-icon name="grid" color="verde" id="icono"></ion-icon></div>
+			    <div col-11>Categorías</div>  
+		    </button>
+		</div>	
+		<div col-6 id="botones">
+			<button ion-button icon-left round color="verdeapp" (click)="goToFavoritos()">
+			    <div col-1><ion-icon name="heart" color="rojo" id="icono"></ion-icon></div>
+			    <div col-11>Favoritos</div>  
+		    </button>
+		</div>	  
+	</ion-row>
 
-</ion-card>
-
+			<div col-12>
+			<ion-card id="barra" color="verdeapp">
+			  <ion-card-header id="promociones">
+			    Algunas promociones para ti
+			  </ion-card-header>
+			</ion-card>
+			
+			<ion-slides autoplay="3000" loop="true" spaceBetween="0" id="slides">
+			    <ion-slide><img src="https://t1.ea.ltmcdn.com/es/images/7/9/5/img_por_que_las_gatas_se_comen_a_sus_gatitos_recien_nacidos_22597_300_150.jpg" imageViewer></ion-slide>
+			    <ion-slide><img src="https://t1.ea.ltmcdn.com/es/images/3/1/4/img_cuando_se_pueden_separar_los_gatitos_de_su_madre_22413_300_150.jpg" imageViewer></ion-slide>
+			    <ion-slide><img src="https://www.farmina.com/fotopagine/7754_20_7756_1021_601_56_pulizia-kitten_53651602.jpg" imageViewer></ion-slide>
+		    </ion-slides>
+			</div>
 
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar>
-    <ion-title>publica con losotros</ion-title>
+  <ion-toolbar color="verdeapp" (click)="goToContacto()">
+    <ion-title>Publica tu negocio</ion-title>
   </ion-toolbar>
 </ion-footer>

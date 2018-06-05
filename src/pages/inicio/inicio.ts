@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { ServiciosPage } from '../servicios/servicios';
+import { ContactoPage } from '../contacto/contacto';
 
 /**
  * Generated class for the InicioPage page.
@@ -36,4 +37,7 @@ export class InicioPage {
   this.navCtrl.push(ServiciosPage);
   }
 
+  goToContacto(){
+  this.navCtrl.push(ContactoPage);
+  }
 }

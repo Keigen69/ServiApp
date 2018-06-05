@@ -1,3 +1,35 @@
 page-inicio {
 
 }
+
+img#logo{
+	display: block;
+    margin: 0 auto;
+}
+
+div#botones{
+	margin-top: -5px;
+	button{
+	width: 100%;
+	}
+}
+
+ion-icon#icono{
+	margin-left: -10px;
+	margin-top: 3px;
+}
+
+ion-card#barra{
+	text-align: center;
+	margin-bottom: 1px;
+	height: 20px;
+	margin-top: -5px;
+}
+
+ion-card-header#promociones{
+	margin-top: -17px;
+}
+
+ion-slides#slides{
+	width: 100%;
+}
