@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="verdeapp">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Inicio</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-end>
+  		<ion-icon name="map"></ion-icon>
+	  </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<img src="images/logofrase.png" width="200" height="auto">
+<ion-searchbar (click)="goToServicios()" placeholder="Buscar servicio o negocio"></ion-searchbar>
+<button ion-button round color="verdeapp" (click)="goToCategorias()">Categorías</button>
+<button ion-button round color="verdeapp" (click)="goToFavoritos()">Favoritos</button>
+<ion-card>
+
+  <ion-card-header>
+   publicidad
+  </ion-card-header>
+
+  <ion-card-content>
+    publicidad publicidad publicidad publicidad publicidad publicidad publicidad publicidad<!-- Add card content here! -->
+  </ion-card-content>
+
+</ion-card>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>publica con losotros</ion-title>
+  </ion-toolbar>
+</ion-footer>

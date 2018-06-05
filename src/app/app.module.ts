@@ -14,6 +14,8 @@ import { TutorialPage } from '../pages/tutorial/tutorial';
 import { ContactoPage } from '../pages/contacto/contacto';
 import { ServiciosPage } from '../pages/servicios/servicios';
 import { FaqPage } from '../pages/faq/faq';
+import { InicioPage } from '../pages/inicio/inicio';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -32,7 +34,8 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     TutorialPage,
     ContactoPage,
     ServiciosPage,
-    FaqPage
+    FaqPage,
+    InicioPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     TutorialPage,
     ContactoPage,
     ServiciosPage,
-    FaqPage
+    FaqPage,
+    InicioPage
   ],
   providers: [
     StatusBar,
