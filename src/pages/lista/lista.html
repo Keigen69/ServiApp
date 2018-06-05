@@ -8,8 +8,22 @@
 
   <ion-navbar color="verdeapp">
     <ion-title>Servicios</ion-title>
-  </ion-navbar>
   
+    <ion-buttons end>
+      <button ion-button icon-end>
+      <ion-icon name="pin"></ion-icon>
+      </button>
+   
+      <button ion-button icon-end>
+      <ion-icon name="options"></ion-icon>
+      </button>
+
+      <button ion-button icon-only (click)="abrirServicios()">
+      <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
 </ion-header>
 
 

@@ -4,90 +4,85 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Categorías</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-end>
+      <ion-icon name="pin"></ion-icon>
+      </button>
+   
+      <button ion-button icon-only (click)="abrirServicios()">
+      <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding class="card-background-page">
 
-  <ion-row id="cate">
-
-    <div col-6 *ngFor="let comi of comida">
-      <ion-card (click)="goToListaComida(comi)">
-        <img src="images/fondos/comida.jpg"/>
+     <div *ngFor="let comi of comida">
+      <ion-card id="boton" (click)="goToListaComida(comi)">
+        <img src="images/fondos/comida.png"/>
         <div class="card-title">{{comi.tipo}}</div>
         <div class="card-subtitle">{{comi.subtitulo}}</div>
       </ion-card>
     </div>
 
-    <div col-6 *ngFor="let belle of belleza">
-      <ion-card (click)="goToListaBelle(belle)">
-        <img src="images/fondos/belleza.jpg"/>
+    <div *ngFor="let belle of belleza">
+      <ion-card id="boton" (click)="goToListaBelle(belle)">
+        <img src="images/fondos/belleza.png"/>
         <div class="card-title">{{belle.tipo}}</div>
         <div class="card-subtitle">{{belle.subtitulo}}</div>
       </ion-card>
     </div>
-   
-  </ion-row>
 
-  <ion-row id="cate">
-
-    <div col-6 *ngFor="let servi of serviciotecnico">
-      <ion-card (click)="goToListaTecnico(servi)">
-        <img src="images/fondos/serviciotecnico.jpg"/>
+    <div *ngFor="let servi of serviciotecnico">
+      <ion-card id="boton" (click)="goToListaTecnico(servi)">
+        <img src="images/fondos/serviciotecnico.png"/>
         <div class="card-title">{{servi.tipo}}</div>
         <div class="card-subtitle">{{servi.subtitulo}}</div>
       </ion-card>
     </div>
 
-    <div col-6 *ngFor="let masco of mascotas">
-      <ion-card (click)="goToListaMasco(masco)">
-        <img src="images/fondos/mascotas.jpg"/>
+    <div *ngFor="let masco of mascotas">
+      <ion-card id="boton" (click)="goToListaMasco(masco)">
+        <img src="images/fondos/mascotas.png"/>
         <div class="card-title">{{masco.tipo}}</div>
         <div class="card-subtitle">{{masco.subtitulo}}</div>
       </ion-card>
     </div>
-  </ion-row>
-  
-    <ion-row id="cate">
-    <div col-6 *ngFor="let sal of salud">
-      <ion-card (click)="goToListaSal(sal)">
-        <img src="images/fondos/salud.jpg"/>
+
+    <div *ngFor="let sal of salud">
+      <ion-card id="boton" (click)="goToListaSal(sal)">
+        <img src="images/fondos/salud.png"/>
         <div class="card-title">{{sal.tipo}}</div>
         <div class="card-subtitle">{{sal.subtitulo}}</div>
       </ion-card>
     </div>
   
-    <div col-6 *ngFor="let nego of negocios"> 
-      <ion-card (click)="goToListaNego(nego)">
-        <img src="images/fondos/negocios.jpg"/>
+    <div *ngFor="let nego of negocios"> 
+      <ion-card id="boton" (click)="goToListaNego(nego)">
+        <img src="images/fondos/negocios.png"/>
         <div class="card-title">{{nego.tipo}}</div>
         <div class="card-subtitle">{{nego.subtitulo}}</div>
       </ion-card>
+    </div> 
+    
+    <div *ngFor="let tran of transporte">
+      <ion-card id="boton" (click)="goToListaTran(tran)">
+        <img src="images/fondos/transporte.png"/>
+        <div class="card-title">{{tran.tipo}}</div>
+        <div class="card-subtitle">{{tran.subtitulo}}</div>
+      </ion-card>
     </div>
-  </ion-row>   
-  
 
-    
-
-  <ion-row id="cate">
-    
-    <div col-6 *ngFor="let otr of otros">
-      <ion-card (click)="goToListaOtr(otr)">
-        <img src="images/fondos/otros.jpg"/>
+    <div *ngFor="let otr of otros">
+      <ion-card id="boton" (click)="goToListaOtr(otr)">
+        <img src="images/fondos/otros.png"/>
         <div class="card-title">{{otr.tipo}}</div>
         <div class="card-subtitle"></div>
       </ion-card>
     </div>
 
-    <div col-6 *ngFor="let tran of transporte">
-      <ion-card (click)="goToListaTran(tran)">
-        <img src="images/fondos/transporte.jpg"/>
-        <div class="card-title">{{tran.tipo}}</div>
-        <div class="card-subtitle">{{tran.subtitulo}}</div>
-      </ion-card>
-    </div>
-  </ion-row>
-
 </ion-content>
-

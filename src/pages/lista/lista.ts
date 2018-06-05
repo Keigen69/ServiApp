@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DetallePage } from '../detalle/detalle';
+import { ServiciosPage } from '../servicios/servicios';
 import { CallNumber } from '@ionic-native/call-number';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -59,5 +60,9 @@ export class ListaPage {
 
     console.log('ionViewDidLoad ListaPage');
   }
+
+  abrirServicios(){
+  this.navCtrl.push(ServiciosPage);
+}
 
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ListaPage } from '../lista/lista';
+import { ServiciosPage } from '../servicios/servicios';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -26,7 +27,7 @@ export class HomePage {
 
   this.posts = null;
    
-  this.http.get('http://serviapp.cl/recursos/prueba.json').map(res => res.json()).subscribe(data => {
+  this.http.get('http://serviapp.cl/recursos/Prueba.json').map(res => res.json()).subscribe(data => {
       this.posts = data.categorias;
       this.comida = this.posts[0].comida;
       this.serviciotecnico = this.posts[1].serviciotecnico;
@@ -98,6 +99,9 @@ export class HomePage {
   }
 
 
+abrirServicios(){
+  this.navCtrl.push(ServiciosPage);
+}
 
 
 
