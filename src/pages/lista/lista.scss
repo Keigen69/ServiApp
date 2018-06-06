@@ -127,3 +127,45 @@ ion-scroll[scrollX] {
   ::-webkit-scrollbar{
     display:none;
   }
+ion-thumbnail#alaizquierda{
+  margin-left: -10px;
+  margin-right: -67px;
+}
+
+img#alaizquierda{
+  width: 10px;
+  height: 70px;
+  margin-top: 5px;
+}
+
+ion-thumbnail#aladerecha{
+  margin-left: -23px;
+  margin-right: -60px;
+}
+
+img#aladerecha{
+  width: 10px;
+  height: 70px;
+  margin-top: 5px;
+}
+
+img#alatop{
+  height: 10px;
+  margin-bottom: 2px;
+  width: 70px;
+}
+
+img#alabot{
+  height: 10px;
+  margin-top: 2px;
+  width: 70px;
+}
+
+img#logocliente{
+  height: 70px;
+  width: 70px;
+}
+
+ion-item#caja{
+  margin-top: -15px;
+}
