@@ -5,6 +5,7 @@ page-inicio {
 img#logo{
 	display: block;
     margin: 0 auto;
+    margin-top: -15px;
 }
 
 div#botones{
@@ -23,6 +24,7 @@ ion-card#barra{
 	text-align: center;
 	margin-bottom: 1px;
 	height: 20px;
+	width: 100%;
 	margin-top: -5px;
 }
 
@@ -32,4 +34,8 @@ ion-card-header#promociones{
 
 ion-slides#slides{
 	width: 100%;
+}
+
+div#caja{
+	margin-left: -10px;
 }

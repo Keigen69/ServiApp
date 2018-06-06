@@ -37,6 +37,15 @@ p#delivery{
 	color: #ff0000;
 }
 
+ion-slides#slides{
+  justify-content: center;
+  margin-left: 10px;
+}
+
+div#caja{
+  margin-left: -10px;
+}
+
 .wide-as-needed {
   overflow: scroll;
   white-space: nowrap;
