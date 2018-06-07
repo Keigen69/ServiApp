@@ -47,8 +47,8 @@ $colors: (
   rojo:       #fe2e2e,
   naranjo:    #ff8000,
   celeste:    #2e9afe,
-  verdeapp:   #00aa4a,
-  negro:      #000000
+  verdeapp:   #37a852,
+  verdepasto: #4C8C65  
 );
 
 h1 {
@@ -63,6 +63,10 @@ ion-item-divider{
 }
 
 $segment-button-md-text-color-activated : #8e44ad;
+
+$popover-md-width: 170px;
+$popover-ios-width: 170px;
+$popover-wp-width: 170px;
 
 
 // App iOS Variables
