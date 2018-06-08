@@ -127,39 +127,6 @@ ion-scroll[scrollX] {
   ::-webkit-scrollbar{
     display:none;
   }
-ion-thumbnail#alaizquierda{
-  margin-left: -10px;
-  margin-right: -67px;
-}
-
-img#alaizquierda{
-  width: 10px;
-  height: 70px;
-  margin-top: 5px;
-}
-
-ion-thumbnail#aladerecha{
-  margin-left: -23px;
-  margin-right: -60px;
-}
-
-img#aladerecha{
-  width: 10px;
-  height: 70px;
-  margin-top: 5px;
-}
-
-img#alatop{
-  height: 10px;
-  margin-bottom: 2px;
-  width: 70px;
-}
-
-img#alabot{
-  height: 10px;
-  margin-top: 2px;
-  width: 70px;
-}
 
 img#logocliente{
   height: 70px;
@@ -168,4 +135,90 @@ img#logocliente{
 
 ion-item#caja{
   margin-top: 0px;
+}
+
+ion-thumbnail#alaizquierda{
+  margin-left: -10px;
+  margin-right: -67px;
+}
+
+ion-thumbnail#aladerecha{
+  margin-left: -23px;
+  margin-right: -60px;
+}
+
+img#cobretop{
+  height: 10px;
+  margin-bottom: 2px;
+  width: 30px;
+  margin-left: 20px;
+}
+
+img#cobrebot{
+  height: 10px;
+  margin-top: 2px;
+  width: 30px;
+  margin-left: 20px;
+}
+
+img#cobreder{
+  width: 10px;
+  height: 30px;
+  margin-top: 25px;
+}
+
+img#cobreizq{
+  width: 10px;
+  height: 30px;
+  margin-top: 25px;
+}
+
+img#platatop{
+  height: 10px;
+  margin-bottom: 2px;
+  width: 50px;
+  margin-left: 10px;
+}
+
+img#platabot{
+  height: 10px;
+  margin-top: 2px;
+  width: 50px;
+  margin-left: 10px;
+}
+
+img#platader{
+  width: 10px;
+  height: 50px;
+  margin-top: 15px;
+}
+
+img#plataizq{
+  width: 10px;
+  height: 50px;
+  margin-top: 15px;
+}
+
+img#orotop{
+  height: 10px;
+  margin-bottom: 2px;
+  width: 70px;
+}
+
+img#orobot{
+  height: 10px;
+  margin-top: 2px;
+  width: 70px;
+}
+
+img#oroder{
+  width: 10px;
+  height: 70px;
+  margin-top: 5px;
+}
+
+img#oroizq{
+  width: 10px;
+  height: 70px;
+  margin-top: 5px;
 }

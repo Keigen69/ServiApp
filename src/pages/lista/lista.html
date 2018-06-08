@@ -10,7 +10,7 @@
     <ion-title>{{item.tipo}}</ion-title>
   
     <ion-buttons end>
-      <button ion-button block outline color="amarillo">PROMOS</button>
+      <button ion-button block outline color="amarillo" (click)="goToPromociones()">PROMOS</button>
 
       <button ion-button icon-end>
       <ion-icon name="pin"></ion-icon>
@@ -32,9 +32,9 @@
 <ion-content padding>
 	<div id="caja">
 	<ion-slides autoplay="3000" loop="true" spaceBetween="0" id="slides">
-			    <ion-slide><img src="http://images-ahn.mdstrm.com/2017/02/17/190569_1_58a718144c508.jpg?d=800x400"></ion-slide>
-			    <ion-slide><img src="https://i.pinimg.com/originals/06/13/9d/06139dc5c4bd6ead23668308674e0a34.jpg"></ion-slide>
-			    <ion-slide><img src="https://i.pinimg.com/originals/c8/45/13/c845137b4ffd65dfc903657105fc1a4d.jpg"></ion-slide>
+			    <ion-slide><img src="http://serviapp.cl/recursos/1.png"></ion-slide>
+			    <ion-slide><img src="http://serviapp.cl/recursos/2.png"></ion-slide>
+			    <ion-slide><img src="http://serviapp.cl/recursos/3.png"></ion-slide>
 	</ion-slides>
 </div>
 
@@ -46,15 +46,15 @@
 			<div *ngFor="let in of item.clientes">
 				<ion-item (click)="goToDetalle(in,item.tipo)" *ngIf="in.destacado == 1;else destacado2">
 		    	  <ion-thumbnail id="alaizquierda" item-start>
-			        <img id="alaizquierda" src="images/destacados/doradoizq.png">
+			        <img id="oroizq" src="images/destacados/doradoizq.png">
 			      </ion-thumbnail>
 			      <ion-thumbnail id="logocliente" item-start>
-			      	<img id="alatop" src="images/destacados/doradotop.png">
+			      	<img id="orotop" src="images/destacados/doradotop.png">
 			        <img id="logocliente" src="http://www.serviapp.cl/recursos/clientes/{{item.tipo}}/{{in.nombre}}/{{in.nombre}}.png">
-			        <img id="alabot" src="images/destacados/doradobot.png">
+			        <img id="orobot" src="images/destacados/doradobot.png">
 			      </ion-thumbnail>
 			      <ion-thumbnail id="aladerecha" item-start>
-			        <img id="aladerecha" src="images/destacados/doradoder.png">
+			        <img id="oroder" src="images/destacados/doradoder.png">
 			      </ion-thumbnail>
 			      <h2>{{ in.nombre }}</h2>
 			      <h3>{{ in.servicio }}</h3>
@@ -66,15 +66,15 @@
 		    	<ng-template #destacado2>
 				<ion-item (click)="goToDetalle(in,item.tipo)" *ngIf="in.destacado == 2;else destacado3">
 			      <ion-thumbnail id="alaizquierda" item-start>
-			        <img id="alaizquierda" src="images/destacados/plateadoizq.png">
+			        <img id="plataizq" src="images/destacados/plateadoizq.png">
 			      </ion-thumbnail>
 			      <ion-thumbnail id="logocliente" item-start>
-			      	<img id="alatop" src="images/destacados/plateadotop.png">
+			      	<img id="platatop" src="images/destacados/plateadotop.png">
 			        <img id="logocliente" src="http://www.serviapp.cl/recursos/clientes/{{item.tipo}}/{{in.nombre}}/{{in.nombre}}.png">
-			        <img id="alabot" src="images/destacados/plateadobot.png">
+			        <img id="platabot" src="images/destacados/plateadobot.png">
 			      </ion-thumbnail>
 			      <ion-thumbnail id="aladerecha" item-start>
-			        <img id="aladerecha" src="images/destacados/plateadoder.png">
+			        <img id="platader" src="images/destacados/plateadoder.png">
 			      </ion-thumbnail>
 				  <h2>{{ in.nombre }}</h2>
 				  <h3>{{ in.servicio }}</h3>
@@ -88,15 +88,15 @@
 				<ng-template #destacado3>
 			    <ion-item (click)="goToDetalle(in,item.tipo)" *ngIf="in.destacado == 3">
 		    	  <ion-thumbnail id="alaizquierda" item-start>
-			        <img id="alaizquierda" src="images/destacados/cobreizq.png">
+			        <img id="cobreizq" src="images/destacados/cobreizq.png">
 			      </ion-thumbnail>
 			      <ion-thumbnail id="logocliente" item-start>
-			      	<img id="alatop" src="images/destacados/cobretop.png">
+			      	<img id="cobretop" src="images/destacados/cobretop.png">
 			        <img id="logocliente" src="http://www.serviapp.cl/recursos/clientes/{{item.tipo}}/{{in.nombre}}/{{in.nombre}}.png">
-			        <img id="alabot" src="images/destacados/cobrebot.png">
+			        <img id="cobrebot" src="images/destacados/cobrebot.png">
 			      </ion-thumbnail>
 			      <ion-thumbnail id="aladerecha" item-start>
-			        <img id="aladerecha" src="images/destacados/cobreder.png">
+			        <img id="cobreder" src="images/destacados/cobreder.png">
 			      </ion-thumbnail>
 			      <h2>{{ in.nombre }}</h2>
 			      <h3>{{ in.servicio }}</h3>
@@ -114,23 +114,23 @@
 	<ion-list>
 	    <ion-item id="caja" *ngFor="let in of item.clientes" (click)="goToDetalle(in,item.tipo)">
 	    	<ion-thumbnail id="alaizquierda" item-start >
-	      	<div *ngIf="in.destacado == 1"><img id="alaizquierda" src="images/destacados/doradoizq.png"></div>
-	        <div *ngIf="in.destacado == 2"><img id="alaizquierda" src="images/destacados/plateadoizq.png"></div>
-	        <div *ngIf="in.destacado == 3"><img id="alaizquierda" src="images/destacados/cobreizq.png"></div>
+	      	<div *ngIf="in.destacado == 1"><img id="oroizq" src="images/destacados/doradoizq.png"></div>
+	        <div *ngIf="in.destacado == 2"><img id="plataizq" src="images/destacados/plateadoizq.png"></div>
+	        <div *ngIf="in.destacado == 3"><img id="cobreizq" src="images/destacados/cobreizq.png"></div>
 	      </ion-thumbnail>
 	      <ion-thumbnail item-start >
-	      	<div *ngIf="in.destacado == 1"><img id="alatop" src="images/destacados/doradotop.png"></div>
-	        <div *ngIf="in.destacado == 2"><img id="alatop" src="images/destacados/plateadotop.png"></div>
-	        <div *ngIf="in.destacado == 3"><img id="alatop" src="images/destacados/cobretop.png"></div>
+	      	<div *ngIf="in.destacado == 1"><img id="orotop" src="images/destacados/doradotop.png"></div>
+	        <div *ngIf="in.destacado == 2"><img id="platatop" src="images/destacados/plateadotop.png"></div>
+	        <div *ngIf="in.destacado == 3"><img id="cobretop" src="images/destacados/cobretop.png"></div>
 	        <img id="logocliente" src="http://www.serviapp.cl/recursos/clientes/{{item.tipo}}/{{in.nombre}}/{{in.nombre}}.png">
-	        <div *ngIf="in.destacado == 1"><img id="alabot" src="images/destacados/doradobot.png"></div>
-	        <div *ngIf="in.destacado == 2"><img id="alabot" src="images/destacados/plateadobot.png"></div>
-	        <div *ngIf="in.destacado == 3"><img id="alabot" src="images/destacados/cobrebot.png"></div>
+	        <div *ngIf="in.destacado == 1"><img id="orobot" src="images/destacados/doradobot.png"></div>
+	        <div *ngIf="in.destacado == 2"><img id="platabot" src="images/destacados/plateadobot.png"></div>
+	        <div *ngIf="in.destacado == 3"><img id="cobrebot" src="images/destacados/cobrebot.png"></div>
 	      </ion-thumbnail>
 	      <ion-thumbnail id="aladerecha" item-start >
-	      	<div *ngIf="in.destacado == 1"><img id="aladerecha" src="images/destacados/doradoder.png"></div>
-	        <div *ngIf="in.destacado == 2"><img id="aladerecha" src="images/destacados/plateadoder.png"></div>
-	        <div *ngIf="in.destacado == 3"><img id="aladerecha" src="images/destacados/cobreder.png"></div>
+	      	<div *ngIf="in.destacado == 1"><img id="oroder" src="images/destacados/doradoder.png"></div>
+	        <div *ngIf="in.destacado == 2"><img id="platader" src="images/destacados/plateadoder.png"></div>
+	        <div *ngIf="in.destacado == 3"><img id="cobreder" src="images/destacados/cobreder.png"></div>
 	      </ion-thumbnail>
 	      <h2>{{ in.nombre }}</h2>
 	      <h3>{{ in.servicio }}</h3>

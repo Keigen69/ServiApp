@@ -4,6 +4,7 @@ import { DetallePage } from '../detalle/detalle';
 import { ServiciosPage } from '../servicios/servicios';
 import { CallNumber } from '@ionic-native/call-number';
 import { Http } from '@angular/http';
+import { PromocionesPage } from '../promociones/promociones';
 import 'rxjs/add/operator/map';
 
 /**
@@ -63,6 +64,10 @@ export class ListaPage {
 
   abrirServicios(){
   this.navCtrl.push(ServiciosPage);
-}
+  }
+
+  goToPromociones(){
+  this.navCtrl.push(PromocionesPage);
+  }
 
 }
