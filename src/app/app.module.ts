@@ -15,6 +15,7 @@ import { ContactoPage } from '../pages/contacto/contacto';
 import { ServiciosPage } from '../pages/servicios/servicios';
 import { FaqPage } from '../pages/faq/faq';
 import { InicioPage } from '../pages/inicio/inicio';
+import { PromocionesPage } from '../pages/promociones/promociones';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -35,7 +36,8 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     ContactoPage,
     ServiciosPage,
     FaqPage,
-    InicioPage
+    InicioPage,
+    PromocionesPage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     ContactoPage,
     ServiciosPage,
     FaqPage,
-    InicioPage
+    InicioPage,
+    PromocionesPage
   ],
   providers: [
     StatusBar,

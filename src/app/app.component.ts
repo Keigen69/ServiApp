@@ -10,6 +10,7 @@ import { ContactoPage } from '../pages/contacto/contacto';
 import { ServiciosPage } from '../pages/servicios/servicios';
 import { FaqPage } from '../pages/faq/faq';
 import { InicioPage } from '../pages/inicio/inicio';
+import { PromocionesPage } from '../pages/promociones/promociones';
 
 @Component({
   templateUrl: 'app.html'
