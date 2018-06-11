@@ -22,7 +22,7 @@ export class InicioPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad InicioPage');
+  console.log('ionViewDidLoad InicioPage');
   }
 
   goToCategorias(){
@@ -39,5 +39,9 @@ export class InicioPage {
 
   goToContacto(){
   this.navCtrl.push(ContactoPage);
+  }
+
+  web(){
+  window.open("https://serviapp.cl/registro/");
   }
 }
