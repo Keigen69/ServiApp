@@ -27,7 +27,7 @@ export class ServiciosPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
 
   	this.initializeItems();
-  	this.http.get('http://serviapp.cl/recursos/DB1.json').map(res => res.json()).subscribe(data => {
+  	this.http.get('http://serviapp.cl/recursos/Prueba.json').map(res => res.json()).subscribe(data => {
   			  
 		      this.aux = data.categorias;
 		     

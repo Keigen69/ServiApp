@@ -20,11 +20,17 @@ ion-icon#icono{
 	margin-top: 3px;
 }
 
+div#caja1{
+	position: center;
+	margin-top: 15px;
+	margin-left: 2px;
+}
+
 ion-card#barra{
 	text-align: center;
 	margin-bottom: 1px;
 	height: 20px;
-	width: 100%;
+	position: center;
 	margin-top: -5px;
 }
 
@@ -32,11 +38,11 @@ ion-card-header#promociones{
 	margin-top: -17px;
 }
 
-ion-slides#slides{
-	width: 100%;
+ion-slides#slides1{
+	position: center;
+	margin-left: 10px;
+	padding-right: 20px;
 }
 
-div#caja1{
-	margin-left: -10px;
-	margin-top: 15px;
+ion-slide#slide1{
 }

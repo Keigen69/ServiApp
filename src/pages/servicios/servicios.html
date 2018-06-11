@@ -18,12 +18,28 @@
 	<ion-list>
 		<div *ngFor="let ser of clone">
 				<ion-item (click)="goToDetalle(ser,ser.tipo)">
-			      <ion-thumbnail item-start >
-			        <img src="http://www.serviapp.cl/recursos/clientes/{{ser.tipo}}/{{ser.nombre}}/{{ser.nombre}}.png">
-			      </ion-thumbnail>
+	    	<ion-thumbnail id="alaizquierda" item-start >
+	      	<div *ngIf="ser.destacado == 1"><img id="oroizq" src="images/destacados/doradoizq.png"></div>
+	        <div *ngIf="ser.destacado == 2"><img id="plataizq" src="images/destacados/plateadoizq.png"></div>
+	        <div *ngIf="ser.destacado == 3"><img id="cobreizq" src="images/destacados/cobreizq.png"></div>
+	      </ion-thumbnail>
+	      <ion-thumbnail item-start >
+	      	<div *ngIf="ser.destacado == 1"><img id="orotop" src="images/destacados/doradotop.png"></div>
+	        <div *ngIf="ser.destacado == 2"><img id="platatop" src="images/destacados/plateadotop.png"></div>
+	        <div *ngIf="ser.destacado == 3"><img id="cobretop" src="images/destacados/cobretop.png"></div>
+	        <img id="logocliente" src="http://www.serviapp.cl/recursos/clientes/{{ser.tipo}}/{{ser.nombre}}/{{ser.nombre}}.png">
+	        <div *ngIf="ser.destacado == 1"><img id="orobot" src="images/destacados/doradobot.png"></div>
+	        <div *ngIf="ser.destacado == 2"><img id="platabot" src="images/destacados/plateadobot.png"></div>
+	        <div *ngIf="ser.destacado == 3"><img id="cobrebot" src="images/destacados/cobrebot.png"></div>
+	      </ion-thumbnail>
+	      <ion-thumbnail id="aladerecha" item-start >
+	      	<div *ngIf="ser.destacado == 1"><img id="oroder" src="images/destacados/doradoder.png"></div>
+	        <div *ngIf="ser.destacado == 2"><img id="platader" src="images/destacados/plateadoder.png"></div>
+	        <div *ngIf="ser.destacado == 3"><img id="cobreder" src="images/destacados/cobreder.png"></div>
+	      </ion-thumbnail>
 			      <h2>{{ ser.nombre }}</h2>
 			      <h3>{{ ser.servicio }}</h3>
-			      <h2>{{ ser.whatsapp }}</h2>
+			      <p *ngIf="ser.domicilio" id="delivery"><ion-icon name="md-bicycle" color="rojo"></ion-icon> {{ ser.domicilio }} </p>
 			      <p>{{ ser.direccion }}</p>
 			    </ion-item>		
 		</div>	    
