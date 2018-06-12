@@ -41,7 +41,7 @@
 	<div *ngIf="valor()">
 	<ion-list id="destacado2" >
 		<div id="destacado">
-			<ion-item-divider>DESTACADOS</ion-item-divider>
+			<ion-item-divider id="desta">DESTACADOS</ion-item-divider>
 		</div>
 			<div *ngFor="let in of item.clientes">
 				<ion-item (click)="goToDetalle(in,item.tipo)" *ngIf="in.destacado == 1;else destacado2">

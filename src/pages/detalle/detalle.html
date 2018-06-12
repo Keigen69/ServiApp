@@ -29,13 +29,13 @@
   <ion-row>
     <div col-5>
         <ion-thumbnail item-start >
-          <div *ngIf="item.destacado == 1"><img id="orotop2" src="images/destacados/doradotop.png"></div>
-          <div *ngIf="item.destacado == 2"><img id="platatop2" src="images/destacados/plateadotop.png"></div>
-          <div *ngIf="item.destacado == 3"><img id="cobretop2" src="images/destacados/cobretop.png"></div>
+          <div *ngIf="item.destacado == 1"><img id="orotop2" src="images/destacados/perfil/doradotop.png"></div>
+          <div *ngIf="item.destacado == 2"><img id="platatop2" src="images/destacados/perfil/plateadotop.png"></div>
+          <div *ngIf="item.destacado == 3"><img id="cobretop2" src="images/destacados/perfil/cobretop.png"></div>
           <img src="http://www.serviapp.cl/recursos/clientes/{{item.tipo}}/{{item.nombre}}/{{item.nombre}}.png">
-          <div *ngIf="item.destacado == 1"><img id="orobot2" src="images/destacados/doradobot.png"></div>
-          <div *ngIf="item.destacado == 2"><img id="platabot2" src="images/destacados/plateadobot.png"></div>
-          <div *ngIf="item.destacado == 3"><img id="cobrebot2" src="images/destacados/cobrebot.png"></div>
+          <div *ngIf="item.destacado == 1"><img id="orobot2" src="images/destacados/perfil/doradobot.png"></div>
+          <div *ngIf="item.destacado == 2"><img id="platabot2" src="images/destacados/perfil/plateadobot.png"></div>
+          <div *ngIf="item.destacado == 3"><img id="cobrebot2" src="images/destacados/perfil/cobrebot.png"></div>
         </ion-thumbnail> 
     </div>
 
@@ -176,7 +176,7 @@
 
 <div [ngSwitch]="pet">
   <ion-list *ngSwitchCase="'promocion'">
-      <ion-slides pager loop="true">
+      <ion-slides pager>
         <ion-slide *ngFor="let pr of item.promocion">
           <img src="http://www.serviapp.cl/recursos/clientes/{{tipo}}/{{item.nombre}}/{{pr.pro}}.png" imageViewer>
         </ion-slide>
@@ -184,7 +184,7 @@
   </ion-list>
  
   <ion-list *ngSwitchCase="'catalogo'">
-      <ion-slides pager loop="true">
+      <ion-slides pager>
         <ion-slide *ngFor="let ca of item.catalogo">
           <img src="http://www.serviapp.cl/recursos/clientes/{{tipo}}/{{item.nombre}}/{{ca.cat}}.png" imageViewer>
         </ion-slide>
@@ -192,11 +192,10 @@
   </ion-list>
 
   <ion-content *ngSwitchCase="'horario'"  id="horario">
-  <ion-item-group *ngFor="let ca of item.horario">
-    <ion-item-divider color="verdeapp">{{ca.dia}}</ion-item-divider>
-    <ion-item *ngFor="let pe of ca.hora" text-center>{{pe.hr}}</ion-item>
-  </ion-item-group>
-
+    <ion-item-group *ngFor="let ca of item.horario">
+      <ion-item-divider color="verdeapp" id="dia">{{ca.dia}}</ion-item-divider>
+      <ion-item *ngFor="let pe of ca.hora" text-center>{{pe.hr}}</ion-item>
+    </ion-item-group>
   </ion-content>
 
 
