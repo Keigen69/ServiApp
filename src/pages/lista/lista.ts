@@ -24,12 +24,13 @@ export class ListaPage {
 	public item;
 	public aux="";
   phoneNumber: number;
+
   
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
 
   	this.item = navParams.get('item');
-  	console.log(this.item);
+  
   }
 
 

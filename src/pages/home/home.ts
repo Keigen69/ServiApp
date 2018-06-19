@@ -36,12 +36,11 @@ export class HomePage {
       this.belleza = this.posts[4].belleza;
       this.mascotas = this.posts[5].mascotas;
       this.salud = this.posts[6].salud;
-      this.otros = this.posts[7].otros;
+      this.otros = this.posts[10].otros;
       console.log(this.posts);
       console.log(this.comida);
 
   });
-
 
 
   }

@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { DetallePage } from '../detalle/detalle';
+import { Keyboard } from '@ionic-native/keyboard';
+
 
 /**
  * Generated class for the ServiciosPage page.
@@ -18,13 +20,16 @@ import { DetallePage } from '../detalle/detalle';
 })
 export class ServiciosPage {
 
+
+
 	public lista= [];
 	public aux;
 	public aux2;
 	public clone;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, public keyboard : Keyboard) {
 
   	this.initializeItems();
   	this.http.get('http://serviapp.cl/recursos/Prueba.json').map(res => res.json()).subscribe(data => {
@@ -98,6 +103,7 @@ export class ServiciosPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ServiciosPage');
+    
   }
 
 }

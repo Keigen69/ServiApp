@@ -12,14 +12,6 @@
     <ion-buttons end>
       <button ion-button block outline color="amarillo" (click)="goToPromociones()">PROMOS</button>
 
-      <button ion-button icon-end>
-      <ion-icon name="pin"></ion-icon>
-      </button>
-   
-      <button ion-button icon-end>
-      <ion-icon name="options"></ion-icon>
-      </button>
-
       <button ion-button icon-only (click)="abrirServicios()">
       <ion-icon name="search"></ion-icon>
       </button>
@@ -30,11 +22,23 @@
 
 
 <ion-content padding>
-	<div id="caja3">
+	<div id="caja3" *ngIf="item.tipo == 'COMIDA'">
 	<ion-slides autoplay="3000" loop="true" spaceBetween="0" id="slides3">
-			    <ion-slide><img src="http://serviapp.cl/recursos/1.png"></ion-slide>
-			    <ion-slide><img src="http://serviapp.cl/recursos/2.png"></ion-slide>
-			    <ion-slide><img src="http://serviapp.cl/recursos/3.png"></ion-slide>
+			    <ion-slide><img  src="http://serviapp.cl/recursos/clientes/COMIDA/Minami%20Sushi/1.png"></ion-slide>
+			    <ion-slide><img  src="http://serviapp.cl/recursos/clientes/COMIDA/Minami%20Sushi/2.png"></ion-slide>
+			    <ion-slide><img  src="http://serviapp.cl/recursos/clientes/COMIDA/Minami%20Sushi/3.png"></ion-slide>
+			    <ion-slide><img  src="http://serviapp.cl/recursos/clientes/COMIDA/Minami%20Sushi/4.png"></ion-slide>
+			    <ion-slide><img  src="http://serviapp.cl/recursos/clientes/COMIDA/Minami%20Sushi/5.png"></ion-slide>
+			    <ion-slide><img  src="http://serviapp.cl/recursos/clientes/COMIDA/Tu%20Pizza%20a%20la%20Piedra/1.png"></ion-slide>
+			    <ion-slide><img  src="http://serviapp.cl/recursos/clientes/COMIDA/Tu%20Pizza%20a%20la%20Piedra/2.png"></ion-slide>
+			    <ion-slide><img  src="http://serviapp.cl/recursos/clientes/COMIDA/Tu%20Pizza%20a%20la%20Piedra/3.png"></ion-slide>
+	</ion-slides>
+</div>
+
+	<div id="caja3" *ngIf="item.tipo == 'OTROS'">
+	<ion-slides autoplay="3000" loop="true" spaceBetween="0" id="slides3">
+			    <ion-slide><img  src="http://serviapp.cl/recursos/clientes/OTROS/Gotitas/1.png"></ion-slide>
+			    
 	</ion-slides>
 </div>
 

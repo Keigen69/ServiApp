@@ -5,45 +5,51 @@
     </button>
     <ion-title>Inicio</ion-title>
     <ion-buttons end>
-      <button ion-button icon-end>
-  		<ion-icon name="pin"></ion-icon>
-	  </button>
+
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
+
 	<img src="images/logo.png" height="150" id="logo">
 
-	<ion-searchbar (click)="goToServicios()" placeholder="Buscar servicio o negocio"></ion-searchbar>
+	<ion-card>
+	  	<button ion-item (click)="goToServicios()">
+	      <ion-icon name="search" item-start></ion-icon>
+	      <font color="grey">Buscar servicio o negocio</font>
+	    </button>
+	</ion-card>
 
 	<ion-row>
-		<div col-6 id="botones">
+		<div col-6 offset-3 id="botones">
 			<button ion-button icon-left round color="verdeapp" (click)="goToCategorias()">
 			    <div col-1><ion-icon name="grid" color="verde" id="icono"></ion-icon></div>
 			    <div col-11>Categorías</div>  
 		    </button>
 		</div>	
-		<div col-6 id="botones">
-			<button ion-button icon-left round color="verdeapp" (click)="goToFavoritos()">
-			    <div col-1><ion-icon name="heart" color="rojo" id="icono"></ion-icon></div>
-			    <div col-11>Favoritos</div>  
-		    </button>
-		</div>	  
+		  
 	</ion-row>
 
 	<div id="caja1">
 	<ion-card id="barra" color="verdepasto">
 		<ion-card-header id="promociones">
 		 Algunas promociones para ti
+
 		</ion-card-header>
 	</ion-card>
 			
-	<ion-slides autoplay="3000" loop="true" spaceBetween="0" id="slides1">
-		<ion-slide id="slide1"><img src="http://serviapp.cl/recursos/1.png"></ion-slide>
-		<ion-slide id="slide1"><img src="http://serviapp.cl/recursos/2.png"></ion-slide>
-		<ion-slide id="slide1"><img src="http://serviapp.cl/recursos/3.png"></ion-slide>
+	<ion-slides autoplay="3000" loop="false" spaceBetween="0" id="slides1">
+		<ion-slide id="slide1"><img (click)="goToDetalle(listaPromo[0].item, listaPromo[0].tip)" src="{{listaPromo[0].link}}"></ion-slide>
+		<ion-slide id="slide1"><img (click)="goToDetalle(listaPromo[1].item, listaPromo[1].tip)" src="{{listaPromo[1].link}}"></ion-slide>
+		<ion-slide id="slide1"><img (click)="goToDetalle(listaPromo[2].item, listaPromo[2].tip)" src="{{listaPromo[2].link}}"></ion-slide>
+		<ion-slide id="slide1"><img (click)="goToDetalle(listaPromo[3].item, listaPromo[3].tip)" src="{{listaPromo[3].link}}"></ion-slide>
+		<ion-slide id="slide1"><img (click)="goToDetalle(listaPromo[4].item, listaPromo[4].tip)" src="{{listaPromo[4].link}}"></ion-slide>
+		<ion-slide id="slide1"><img (click)="goToDetalle(listaPromo[5].item, listaPromo[5].tip)" src="{{listaPromo[5].link}}"></ion-slide>
+		<ion-slide id="slide1"><img (click)="goToDetalle(listaPromo[6].item, listaPromo[6].tip)" src="{{listaPromo[6].link}}"></ion-slide>
+		<ion-slide id="slide1"><img (click)="goToDetalle(listaPromo[7].item, listaPromo[7].tip)" src="{{listaPromo[7].link}}"></ion-slide>
+		<ion-slide id="slide1"><img (click)="goToDetalle(listaPromo[8].item, listaPromo[8].tip)" src="{{listaPromo[8].link}}"></ion-slide>
 	</ion-slides>
 	</div>
 
